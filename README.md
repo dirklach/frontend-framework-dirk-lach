@@ -100,4 +100,37 @@ Written by Dirk Lach, Designer and Developer
 
 ## Foundations › z-index
 - …
+
+---
+
+# Components
+
+## Components › File Structure
+- Like mentioned under »General« you should divide each element of your component with the help of a bold divider:
+```css
+// ==================================================================
+// Components / A Component
+// ==================================================================
+
+.c-acomponent {
+  display: flex;
+}
+
+// ==================================================================
+// Components / A Component > Title
+// ==================================================================
+
+.c-acomponent__title {
+  display: flex;
+}
+
+// ==================================================================
+// Components / A Component > Content
+// ==================================================================
+
+.c-acomponent__content {
+  display: flex;
+}
+```
+
    
