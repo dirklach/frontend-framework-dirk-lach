@@ -33,6 +33,9 @@ Written by Dirk Lach, Designer and Developer
 
 ---
 
+# Colors
+- Only use colors which are defined as variables in your foundations
+
 # Typography
 
 - The following font decisions should only made in the foundations, not in the components itself:
