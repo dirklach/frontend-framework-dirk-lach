@@ -2,7 +2,7 @@
 
 **My very own approach to writing friendly and scalable CSS.**
 
-WIP ⚠️ This is a living document, based on best practices and personal experience.
+⚠️**WIP**⚠️ This is a living document, based on best practices and personal experience.
 Written by Dirk Lach, Designer and Developer.
 
 ---
@@ -109,7 +109,21 @@ You should decide on a style of ordering for your declarations on a project-by-p
 - …
 
 ## Foundations › Index
-- …
+- Sort your imports alphabetically
+```scss
+@forward "breadcrumb";
+@forward "card";
+@forward "facts";
+@forward "footer";
+@forward "headerbar";
+@forward "heading";
+@forward "hero";
+@forward "marquee";
+@forward "metabar";
+@forward "section";
+@forward "subheading";
+
+```
 
 ## Foundations › Reset
 - …
