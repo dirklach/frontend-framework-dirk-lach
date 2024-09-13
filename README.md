@@ -35,7 +35,7 @@ This is a living document, based on best practices and personal experience. Writ
 # General
 
 ## General › Class Naming
-- I use BEM.
+- I am using [BEM](https://getbem.com/) to structure my CSS.
 
 ## General › Nesting (SCSS)
 - For readability reasons I avoid nesting my code as soon as I leave a specific part or element.
