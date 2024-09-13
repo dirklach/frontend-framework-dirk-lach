@@ -1,7 +1,12 @@
 # friendlycss
 
-# Work in progress: My personal approach to write friendly and scalable CSS.
-### Written by Dirk Lach, Designer and Developer
+### Work in progress
+## My personal approach to write friendly and scalable CSS.
+Written by Dirk Lach, Designer and Developer
+
+---
+
+# Folder structure
 
 - **00-vendor**
 - **01-foundations**
@@ -26,7 +31,10 @@
   - _index.scss
   - _xcomponent.scss
 
+---
+
 # Typography
+
 - The following font decisions should only made in the foundations, not in the components itself:
   - - font-family
     - font-weight
