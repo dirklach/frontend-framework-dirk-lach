@@ -35,9 +35,9 @@ Written by Dirk Lach, Designer and Developer
 
 # General
 
-## General › Component File Structure
-- Import the foundations with the help of @use
-- Divid every component or nested element in a file with a bold divider
+## General › File Structure
+- Import the foundations with the help of @use (if needed)
+- Divide every component or nested element in a file with a bold divider
 
 ```css
 @use "../01-foundations" as *;
