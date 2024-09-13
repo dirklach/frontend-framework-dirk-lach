@@ -24,7 +24,7 @@ Written by Dirk Lach, Designer and Developer
   - _typography.scss
   - _z-index.scss
 - **02-components**
-- - _acomponent.scss
+  - _acomponent.scss
   - _bcomponent.scss
   - _ccomponent.scss
   - _dcomponent.scss
@@ -36,13 +36,13 @@ Written by Dirk Lach, Designer and Developer
 # Typography
 
 - The following font decisions should only made in the foundations, not in the components itself:
-  - - font-family
-    - font-weight
-    - font-size
-    - line-height
-    - color
-    - transitions
-    - hover effects
+  - font-family
+  - font-weight
+  - font-size
+  - line-height
+  - color
+  - transitions
+  - hover effects
 
 ---
 
