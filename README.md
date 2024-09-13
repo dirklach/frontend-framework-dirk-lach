@@ -1,5 +1,8 @@
 # friendlycss
 
+# Work in progress: My personal approach to write friendly and scalable CSS.
+### Written by Dirk Lach, Designer and Developer
+
 - **00-vendor**
 - **01-foundations**
   - _animation.scss
