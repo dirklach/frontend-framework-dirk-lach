@@ -34,6 +34,13 @@ This is a living document, based on best practices and personal experience. Writ
 
 # General
 
+## General › Class Naming
+- I use BEM.
+
+## General › Nesting (SCSS)
+- For readability reasons I avoid nesting my code as soon as I leave a specific part or element.
+- I use nested code only for pseudo classes, pseudo elements, and media queries.
+
 ## General › File Structure
 - Import the foundations with the help of @use (if needed)
 - Divide every component or nested element in a file with a bold divider
