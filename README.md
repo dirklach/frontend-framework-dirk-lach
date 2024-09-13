@@ -1,6 +1,6 @@
 # friendlycss
 
-### Work in progress
+**Work in progress**
 ## My personal approach to write friendly and scalable CSS.
 Written by Dirk Lach, Designer and Developer
 
@@ -43,4 +43,20 @@ Written by Dirk Lach, Designer and Developer
     - color
     - transitions
     - hover effects
+
+---
+
+# File Structure
+
+```css
+@use "../01-foundations" as *;
+
+// ==================================================================
+// Components / A Component
+// ==================================================================
+
+.c-acomponent {
+  display: flex;
+}
+```
    
