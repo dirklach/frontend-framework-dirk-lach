@@ -1,7 +1,7 @@
-# friendlycss
+# FriendlyCSS
 
-## My personal approach to write friendly and scalable CSS.
-This is a living document. Written by Dirk Lach, Designer and Developer
+## My personal approach to writing friendly and scalable CSS.
+This is a living document, based on best practices and personal experience. Written by Dirk Lach, Designer and Developer.
 
 ---
 
