@@ -33,6 +33,24 @@ Written by Dirk Lach, Designer and Developer
 
 ---
 
+# General › Component File Structure
+- Import the foundations with the help of @use
+- Divid every component or nested element in a file with a bold divider
+
+```css
+@use "../01-foundations" as *;
+
+// ==================================================================
+// Components / A Component
+// ==================================================================
+
+.c-acomponent {
+  display: flex;
+}
+```
+
+---
+
 # Foundations
 
 ## Foundations › Animation
@@ -69,15 +87,6 @@ Written by Dirk Lach, Designer and Developer
 - …
 
 ## Foundations › Typography
-- …
-
-## Foundations › z-index
-- …
-
----
-
-## Typography
-
 - The following font decisions should only made in the foundations, not in the components itself:
   - font-family
   - font-weight
@@ -87,21 +96,6 @@ Written by Dirk Lach, Designer and Developer
   - transitions
   - hover effects
 
----
-
-# Component File Structure
-- Import the foundations with the help of @use
-- Divid every component or nested element in a file with a bold divider
-
-```css
-@use "../01-foundations" as *;
-
-// ==================================================================
-// Components / A Component
-// ==================================================================
-
-.c-acomponent {
-  display: flex;
-}
-```
+## Foundations › z-index
+- …
    
