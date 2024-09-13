@@ -33,10 +33,26 @@ Written by Dirk Lach, Designer and Developer
 
 ---
 
-# Colors
+# Foundations
+
+## Foundations › Animation
+- …
+
+## Foundations › Color
 - Only use colors which are defined as variables in your foundations
 
-# Typography
+## Foundations › Fonts
+- …
+
+## Foundations › Global
+- …
+
+## Foundations › Index
+- …
+
+…
+
+## Typography
 
 - The following font decisions should only made in the foundations, not in the components itself:
   - font-family
