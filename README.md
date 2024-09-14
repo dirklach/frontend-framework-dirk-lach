@@ -161,7 +161,7 @@ You should decide on a style of ordering for your declarations on a project-by-p
 # Components
 
 ## Components › File Structure
-- Like mentioned under »General« you should divide each element of your component with the help of a bold divider:
+- As mentioned under ‘General,’ you should separate each element of your component using a bold divider.
 ```css
 // ==================================================================
 // Components / A Component
