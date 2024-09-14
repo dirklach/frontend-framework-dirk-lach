@@ -177,6 +177,11 @@ You should decide on a style of ordering for your declarations on a project-by-p
 
 .c-acomponent__title {
   display: flex;
+
+  &::before {
+    content: "—"
+  }
+
 }
 
 // ==================================================================
@@ -185,6 +190,11 @@ You should decide on a style of ordering for your declarations on a project-by-p
 
 .c-acomponent__content {
   display: flex;
+
+  &:hover {
+    border: 1px solid red;
+  }
+
 }
 ```
 
