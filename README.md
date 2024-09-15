@@ -61,7 +61,7 @@ Written by Dirk Lach, Designer and Developer.
 
 ## General › Declaration order
 
-You should decide on a style of ordering for your declarations on a project-by-project basis. I suggest using either alphabetical or type order, as shown in the following example: (inspired by [Idiomatic CSS](https://github.com/necolas/idiomatic-css#declaration-order))
+Choose a style for organizing your CSS declarations based on the needs of each project. I recommend either alphabetical or type-based ordering, as demonstrated in the following example (inspired by Idiomatic CSS).
 
 ```css
 .selector {
