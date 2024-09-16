@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass src/scss/main.scss public/main.css",
+    "build": "sass src/scss/main.scss public/main.css && pnpm copy:html",
     "watch:sass": "sass --watch src/scss/main.scss public/main.css",
-    "serve": "browser-sync start --server --files 'public/*.css, index.html'",
-    "dev": "concurrently \"pnpm watch:sass\" \"pnpm serve\""
+    "serve": "browser-sync start --server public --files 'public/*.css, public/*.html'",
+    "copy:html": "cp index.html public/",
+    "watch:html": "onchange 'index.html' -- pnpm copy:html",
+    "dev": "concurrently \"pnpm watch:sass\" \"pnpm watch:html\" \"pnpm serve\""
   },
   "devDependencies": {
     "sass": "^1.55.0",
     "browser-sync": "^2.27.7",
-    "concurrently": "^7.0.0"
+    "concurrently": "^7.0.0",
+    "onchange": "^7.1.0"
   },
   "keywords": [],
   "author": "",
