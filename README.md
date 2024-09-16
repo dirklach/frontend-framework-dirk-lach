@@ -6,7 +6,6 @@
 Written by Dirk Lach, Designer and Developer.
 
 Demo: [https://friendlycss.vercel.app/](https://friendlycss.vercel.app/)
-Source code: [view-source:https://friendlycss.vercel.app/](view-source:https://friendlycss.vercel.app/)
 
 ---
 
