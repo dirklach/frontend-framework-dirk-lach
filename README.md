@@ -6,6 +6,8 @@
 
 Written by Dirk Lach, Designer and Developer.
 
+Demo: [https://friendlycss.vercel.app/](https://friendlycss.vercel.app/)
+
 ---
 
 # Folder structure
