@@ -1,0 +1,20 @@
+{
+  "name": "friendlycss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src/scss/main.scss dist/main.css",
+    "watch:sass": "sass --watch src/scss/main.scss dist/main.css",
+    "serve": "browser-sync start --server --files 'dist/*.css, index.html'",
+    "dev": "concurrently \"pnpm watch:sass\" \"pnpm serve\""
+  },
+  "devDependencies": {
+    "sass": "^1.55.0",
+    "browser-sync": "^2.27.7",
+    "concurrently": "^7.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
