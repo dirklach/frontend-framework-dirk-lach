@@ -6,7 +6,7 @@
 
 Written by Dirk Lach, Designer and Developer.
 
-Demo: [https://friendlycss.vercel.app/](https://friendlycss.vercel.app/)
+Playground: [https://friendlycss.vercel.app/](https://friendlycss.vercel.app/)
 
 ---
 
