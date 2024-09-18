@@ -6,6 +6,7 @@
 
 Written by Dirk Lach, Designer and Developer.
 
+<!--
 Playground: [https://friendlycss.vercel.app/](https://friendlycss.vercel.app/)
 
 ---
@@ -215,4 +216,4 @@ Choose a style for organizing your CSS declarations based on the needs of each p
     border: 1px solid red;
   }
 }
-```
+``` -->
