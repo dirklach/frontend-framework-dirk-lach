@@ -1,16 +1,16 @@
 // ==========================================================================
-// Foundations / Font Sizes
+// Foundations / Typography / Sizes
 // ==========================================================================
 
 /* @link https://utopia.fyi/type/calculator?c=320,18,1.125,1240,18,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-  --step--1: clamp(0.844rem, 1.0543rem + -0.2714vw, 1rem);
-  --step-0: clamp(1.125rem, 1.225rem + 0vw, 1.25rem);
-  --step-1: clamp(1.2656rem, 1.1842rem + 0.407vw, 1.4996rem);
-  --step-2: clamp(1.4238rem, 1.2238rem + 1.0003vw, 1.999rem);
-  --step-3: clamp(1.6018rem, 1.2321rem + 1.8485vw, 2.6647rem);
-  --step-4: clamp(1.802rem, 1.1933rem + 3.0434vw, 3.552rem);
-  --step-5: clamp(2.0273rem, 1.0855rem + 4.7087vw, 4.7348rem);
-  --step-6: clamp(2.2807rem, 0.8787rem + 7.0101vw, 8.0115rem);
+  --size--1: clamp(0.844rem, 1.0543rem + -0.2714vw, 1rem);
+  --size-0: clamp(1.125rem, 1.225rem + 0vw, 1.25rem);
+  --size-1: clamp(1.2656rem, 1.1842rem + 0.407vw, 1.4996rem);
+  --size-2: clamp(1.4238rem, 1.2238rem + 1.0003vw, 1.999rem);
+  --size-3: clamp(1.6018rem, 1.2321rem + 1.8485vw, 2.6647rem);
+  --size-4: clamp(1.802rem, 1.1933rem + 3.0434vw, 3.552rem);
+  --size-5: clamp(2.0273rem, 1.0855rem + 4.7087vw, 4.7348rem);
+  --size-6: clamp(2.2807rem, 0.8787rem + 7.0101vw, 8.0115rem);
 }

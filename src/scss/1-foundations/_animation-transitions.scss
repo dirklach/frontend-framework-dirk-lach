@@ -1,11 +1,7 @@
 // ==========================================================================
-// Foundations / Typography / Weights
+// Foundations / Animation / Transitions
 // ==========================================================================
 
 :root {
-  --weight-light: 300;
-  --weight-normal: 400;
-  --weight-medium: 500;
-  --weight-semibold: 600;
-  --weight-bold: 700;
+  --transition-alpha: var(--speed-fast) var(--power1-ease-out);
 }
