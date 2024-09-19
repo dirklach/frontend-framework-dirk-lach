@@ -3,10 +3,13 @@
 // ==========================================================================
 
 body {
+  color: var(--color-primary);
+  background: var(--color-secondary);
 }
 
 // ==========================================================================
-// Foundations / Global / Selection
+// Foundations / Text Selection
+// ==========================================================================
 
 ::selection {
   color: var(--color-primary);
