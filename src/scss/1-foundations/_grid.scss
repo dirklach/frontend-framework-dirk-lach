@@ -1,0 +1,117 @@
+// ==========================================================================
+// Foundations / Grid
+// ========================================================================== */
+
+.grid {
+  --default-gap: var(--space-m);
+
+  display: grid;
+  gap: var(--default-gap);
+  margin: 2rem 0;
+
+  > * {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// ==========================================================================
+// Foundations / Grid Column Classes
+// ========================================================================== */
+
+@for $i from 1 through 12 {
+  .grid-col-#{$i} {
+    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+
+// ==========================================================================
+// Foundations / Grid Gap Classes
+// ========================================================================== */
+
+@mixin generate-gap-classes($name, $value) {
+  .gap-#{$name} {
+    gap: $value;
+  }
+
+  .gap-x-#{$name} {
+    column-gap: $value;
+  }
+
+  .gap-y-#{$name} {
+    row-gap: $value;
+  }
+}
+
+// Reference the spacing values from the :root
+
+$spaces: (
+  "0": 0,
+  "3xs": var(--space-3xs),
+  "2xs": var(--space-2xs),
+  "xs": var(--space-xs),
+  "s": var(--space-s),
+  "m": var(--space-m),
+  "l": var(--space-l),
+  "xl": var(--space-xl),
+  "2xl": var(--space-2xl),
+  "3xl": var(--space-3xl),
+  "4xl": var(--space-4xl),
+  "5xl": var(--space-5xl),
+);
+
+@each $name, $value in $spaces {
+  @include generate-gap-classes($name, $value);
+}
+
+// ==========================================================================
+// Column Utilities (Grid)
+// ========================================================================== */
+
+@mixin generate-span-classes($i) {
+  .col-span-#{$i} {
+    grid-column: span #{$i} / span #{$i};
+  }
+}
+
+@mixin generate-start-classes($i) {
+  .col-start-#{$i} {
+    grid-column-start: #{$i};
+  }
+}
+
+@mixin generate-end-classes($i) {
+  .col-end-#{$i} {
+    grid-column-end: #{$i};
+  }
+}
+
+.col-auto {
+  grid-column: auto;
+}
+
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
+.col-start-auto {
+  grid-column-start: auto;
+}
+
+.col-end-auto {
+  grid-column-end: auto;
+}
+
+@for $i from 1 through 12 {
+  @include generate-span-classes($i);
+  @include generate-start-classes($i);
+  @include generate-end-classes($i);
+}
+
+// Generate start and end class for 13 (since it's not part of the loop)
+.col-start-13 {
+  grid-column-start: 13;
+}
+
+.col-end-13 {
+  grid-column-end: 13;
+}

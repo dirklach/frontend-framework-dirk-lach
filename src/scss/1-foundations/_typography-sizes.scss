@@ -14,3 +14,37 @@
   --size-5: clamp(2.0273rem, 1.0855rem + 4.7087vw, 4.7348rem);
   --size-6: clamp(2.2807rem, 0.8787rem + 7.0101vw, 8.0115rem);
 }
+
+/* Demo Purposes Only */
+
+.demo-size--1 {
+  font-size: var(--size--1);
+}
+
+.demo-size-0 {
+  font-size: var(--size-0);
+}
+
+.demo-size-1 {
+  font-size: var(--size-1);
+}
+
+.demo-size-2 {
+  font-size: var(--size-2);
+}
+
+.demo-size-3 {
+  font-size: var(--size-3);
+}
+
+.demo-size-4 {
+  font-size: var(--size-4);
+}
+
+.demo-size-5 {
+  font-size: var(--size-5);
+}
+
+.demo-size-6 {
+  font-size: var(--size-6);
+}

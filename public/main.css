@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --elastic-ease-in: cubic-bezier(0.6, -0.28, 0.735, 0.045);
   --elastic-ease-out: cubic-bezier(0.25, 1.46, 0.45, 1.6);
@@ -32,15 +33,15 @@
 }
 
 :root {
-  --transition-alpha: var(--speed-fast) var(--power1-ease-out);
-}
-
-:root {
   --speed-faster: 0.1s;
   --speed-fast: 0.3s;
   --speed-normal: 0.5s;
   --speed-slow: 0.8s;
   --speed-slower: 1s;
+}
+
+:root {
+  --transition-alpha: var(--speed-fast) var(--power1-ease-out);
 }
 
 :root {
@@ -56,6 +57,376 @@ body {
 ::selection {
   color: var(--color-primary);
   background: var(--color-secondary);
+}
+
+.grid {
+  --default-gap: var(--space-m);
+  display: grid;
+  gap: var(--default-gap);
+  margin: 2rem 0;
+}
+.grid > * {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.grid-col-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-col-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-col-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-col-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-col-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-col-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-col-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-col-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid-col-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid-col-11 {
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid-col-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.gap-0 {
+  gap: 0;
+}
+
+.gap-x-0 {
+  column-gap: 0;
+}
+
+.gap-y-0 {
+  row-gap: 0;
+}
+
+.gap-3xs {
+  gap: var(--space-3xs);
+}
+
+.gap-x-3xs {
+  column-gap: var(--space-3xs);
+}
+
+.gap-y-3xs {
+  row-gap: var(--space-3xs);
+}
+
+.gap-2xs {
+  gap: var(--space-2xs);
+}
+
+.gap-x-2xs {
+  column-gap: var(--space-2xs);
+}
+
+.gap-y-2xs {
+  row-gap: var(--space-2xs);
+}
+
+.gap-xs {
+  gap: var(--space-xs);
+}
+
+.gap-x-xs {
+  column-gap: var(--space-xs);
+}
+
+.gap-y-xs {
+  row-gap: var(--space-xs);
+}
+
+.gap-s {
+  gap: var(--space-s);
+}
+
+.gap-x-s {
+  column-gap: var(--space-s);
+}
+
+.gap-y-s {
+  row-gap: var(--space-s);
+}
+
+.gap-m {
+  gap: var(--space-m);
+}
+
+.gap-x-m {
+  column-gap: var(--space-m);
+}
+
+.gap-y-m {
+  row-gap: var(--space-m);
+}
+
+.gap-l {
+  gap: var(--space-l);
+}
+
+.gap-x-l {
+  column-gap: var(--space-l);
+}
+
+.gap-y-l {
+  row-gap: var(--space-l);
+}
+
+.gap-xl {
+  gap: var(--space-xl);
+}
+
+.gap-x-xl {
+  column-gap: var(--space-xl);
+}
+
+.gap-y-xl {
+  row-gap: var(--space-xl);
+}
+
+.gap-2xl {
+  gap: var(--space-2xl);
+}
+
+.gap-x-2xl {
+  column-gap: var(--space-2xl);
+}
+
+.gap-y-2xl {
+  row-gap: var(--space-2xl);
+}
+
+.gap-3xl {
+  gap: var(--space-3xl);
+}
+
+.gap-x-3xl {
+  column-gap: var(--space-3xl);
+}
+
+.gap-y-3xl {
+  row-gap: var(--space-3xl);
+}
+
+.gap-4xl {
+  gap: var(--space-4xl);
+}
+
+.gap-x-4xl {
+  column-gap: var(--space-4xl);
+}
+
+.gap-y-4xl {
+  row-gap: var(--space-4xl);
+}
+
+.gap-5xl {
+  gap: var(--space-5xl);
+}
+
+.gap-x-5xl {
+  column-gap: var(--space-5xl);
+}
+
+.gap-y-5xl {
+  row-gap: var(--space-5xl);
+}
+
+.col-auto {
+  grid-column: auto;
+}
+
+.col-span-full {
+  grid-column: 1/-1;
+}
+
+.col-start-auto {
+  grid-column-start: auto;
+}
+
+.col-end-auto {
+  grid-column-end: auto;
+}
+
+.col-span-1 {
+  grid-column: span 1/span 1;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+
+.col-end-1 {
+  grid-column-end: 1;
+}
+
+.col-span-2 {
+  grid-column: span 2/span 2;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.col-end-2 {
+  grid-column-end: 2;
+}
+
+.col-span-3 {
+  grid-column: span 3/span 3;
+}
+
+.col-start-3 {
+  grid-column-start: 3;
+}
+
+.col-end-3 {
+  grid-column-end: 3;
+}
+
+.col-span-4 {
+  grid-column: span 4/span 4;
+}
+
+.col-start-4 {
+  grid-column-start: 4;
+}
+
+.col-end-4 {
+  grid-column-end: 4;
+}
+
+.col-span-5 {
+  grid-column: span 5/span 5;
+}
+
+.col-start-5 {
+  grid-column-start: 5;
+}
+
+.col-end-5 {
+  grid-column-end: 5;
+}
+
+.col-span-6 {
+  grid-column: span 6/span 6;
+}
+
+.col-start-6 {
+  grid-column-start: 6;
+}
+
+.col-end-6 {
+  grid-column-end: 6;
+}
+
+.col-span-7 {
+  grid-column: span 7/span 7;
+}
+
+.col-start-7 {
+  grid-column-start: 7;
+}
+
+.col-end-7 {
+  grid-column-end: 7;
+}
+
+.col-span-8 {
+  grid-column: span 8/span 8;
+}
+
+.col-start-8 {
+  grid-column-start: 8;
+}
+
+.col-end-8 {
+  grid-column-end: 8;
+}
+
+.col-span-9 {
+  grid-column: span 9/span 9;
+}
+
+.col-start-9 {
+  grid-column-start: 9;
+}
+
+.col-end-9 {
+  grid-column-end: 9;
+}
+
+.col-span-10 {
+  grid-column: span 10/span 10;
+}
+
+.col-start-10 {
+  grid-column-start: 10;
+}
+
+.col-end-10 {
+  grid-column-end: 10;
+}
+
+.col-span-11 {
+  grid-column: span 11/span 11;
+}
+
+.col-start-11 {
+  grid-column-start: 11;
+}
+
+.col-end-11 {
+  grid-column-end: 11;
+}
+
+.col-span-12 {
+  grid-column: span 12/span 12;
+}
+
+.col-start-12 {
+  grid-column-start: 12;
+}
+
+.col-end-12 {
+  grid-column-end: 12;
+}
+
+.col-start-13 {
+  grid-column-start: 13;
+}
+
+.col-end-13 {
+  grid-column-end: 13;
 }
 
 :root {
@@ -408,6 +779,7 @@ textarea {
   --space-5xl: clamp(13.5rem, calc(13.16rem + 1.7vw), 15rem);
 }
 
+/* font-faces here … */
 /* @link https://utopia.fyi/type/calculator?c=320,18,1.125,1240,18,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
   --size--1: clamp(0.844rem, 1.0543rem + -0.2714vw, 1rem);
@@ -418,6 +790,107 @@ textarea {
   --size-4: clamp(1.802rem, 1.1933rem + 3.0434vw, 3.552rem);
   --size-5: clamp(2.0273rem, 1.0855rem + 4.7087vw, 4.7348rem);
   --size-6: clamp(2.2807rem, 0.8787rem + 7.0101vw, 8.0115rem);
+}
+
+/* Demo Purposes Only */
+.demo-size--1 {
+  font-size: var(--size--1);
+}
+
+.demo-size-0 {
+  font-size: var(--size-0);
+}
+
+.demo-size-1 {
+  font-size: var(--size-1);
+}
+
+.demo-size-2 {
+  font-size: var(--size-2);
+}
+
+.demo-size-3 {
+  font-size: var(--size-3);
+}
+
+.demo-size-4 {
+  font-size: var(--size-4);
+}
+
+.demo-size-5 {
+  font-size: var(--size-5);
+}
+
+.demo-size-6 {
+  font-size: var(--size-6);
+}
+
+/* Heading Base Styles */
+.text-heading {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: var(--weight-bold);
+}
+
+.text-heading-alternative {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: var(--weight-regular);
+}
+
+/* Heading Modifier Styles */
+.--h1 {
+  font-size: var(--size-6);
+}
+
+.--h2 {
+  font-size: var(--size-5);
+}
+
+.--h3 {
+  font-size: var(--size-4);
+}
+
+.--h4 {
+  font-size: var(--size-3);
+}
+
+.--h5 {
+  font-size: var(--size-2);
+}
+
+.--h6 {
+  font-size: var(--size-1);
+  font-weight: var(--weight-regular);
+}
+
+/* Copy Base Styles */
+.text-copy-s {
+  font-size: var(--size--1);
+}
+
+.text-copy {
+  font-size: var(--size-0);
+}
+
+.text-copy-l {
+  font-size: var(--size-1);
+}
+
+/* Copy Modifier Styles */
+.--bold {
+  font-weight: var(--weight-bold);
+}
+
+.--underline {
+  text-decoration: underline;
+}
+
+.text-label {
+  display: block;
+  font-size: var(--size--1);
+  line-height: var(--line-height-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
 }
 
 :root {
