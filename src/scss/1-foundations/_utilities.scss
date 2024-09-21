@@ -1,3 +1,32 @@
+@use "spacings" as *;
+
 // ==================================================================
 // Foundations / Utilities
 // ==================================================================
+
+// ==========================================================================
+// Spacing Utilities (mt / mb)
+// ==========================================================================
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+@each $name, $value in $spaces {
+  .mt-#{$name} {
+    margin-top: $value;
+  }
+
+  .mb-#{$name} {
+    margin-bottom: $value;
+  }
+
+  .my-#{$name} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+}

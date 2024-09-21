@@ -1,18 +1,27 @@
+@use "spacings" as *;
+
 // ==========================================================================
 // Foundations / Grid
 // ==========================================================================
 
-.grid {
+.s-section {
+  --default-margin-y: 2rem;
+
+  border: 1px solid red;
+  margin: var(--default-margin-y) 0;
+}
+
+.s-container {
+  border: 1px solid blue;
   --default-gap: var(--space-m);
   --default-columns: 12;
 
   display: grid;
   gap: var(--default-gap);
-  margin: 2rem 0;
   grid-template-columns: repeat(var(--default-columns), 1fr);
 
   > * {
-    background: rgba(255, 255, 255, 0.1);
+    background: yellow;
   }
 }
 
@@ -43,14 +52,14 @@ $breakpoints: (
   "xl": "1280px",
 );
 
-@mixin generate-responsive-span-classes($i) {
-  .col-span-#{$i} {
+@mixin generate-responsive-classes($i) {
+  .col-#{$i} {
     grid-column: span #{$i} / span #{$i};
   }
 
   @each $breakpoint, $size in $breakpoints {
     @media (min-width: $size) {
-      .#{$breakpoint}\@col-span-#{$i} {
+      .#{$breakpoint}\:col-#{$i} {
         grid-column: span #{$i} / span #{$i};
       }
     }
@@ -58,10 +67,10 @@ $breakpoints: (
 }
 
 @for $i from 1 through 12 {
-  @include generate-responsive-span-classes($i);
+  @include generate-responsive-classes($i);
 }
 
-.col-span-full {
+.col-full {
   grid-column: 1 / -1;
 }
 
@@ -83,21 +92,6 @@ $breakpoints: (
   }
 }
 
-$spaces: (
-  "0": 0,
-  "3xs": var(--space-3xs),
-  "2xs": var(--space-2xs),
-  "xs": var(--space-xs),
-  "s": var(--space-s),
-  "m": var(--space-m),
-  "l": var(--space-l),
-  "xl": var(--space-xl),
-  "2xl": var(--space-2xl),
-  "3xl": var(--space-3xl),
-  "4xl": var(--space-4xl),
-  "5xl": var(--space-5xl),
-);
-
 @each $name, $value in $spaces {
   @include generate-gap-classes($name, $value);
 }
@@ -113,7 +107,7 @@ $spaces: (
 
   @each $breakpoint, $size in $breakpoints {
     @media (min-width: $size) {
-      .#{$breakpoint}\@col-start-#{$i} {
+      .#{$breakpoint}\:col-start-#{$i} {
         grid-column-start: #{$i};
       }
     }
@@ -127,7 +121,7 @@ $spaces: (
 
   @each $breakpoint, $size in $breakpoints {
     @media (min-width: $size) {
-      .#{$breakpoint}\@col-end-#{$i} {
+      .#{$breakpoint}\:col-end-#{$i} {
         grid-column-end: #{$i};
       }
     }
