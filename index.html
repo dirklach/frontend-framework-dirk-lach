@@ -8,6 +8,14 @@
   </head>
 
   <body>
+    <section class="l-section">
+      <div class="l-container">
+        <div class="l-block" data-col="sm:2-4 md:1-8">
+          <div class="c-my-component">…</div>
+        </div>
+      </div>
+    </section>
+
     <span class="text-label">Typography Sizes</span>
 
     <h1 class="demo-size--1">Size -1</h1>
@@ -49,21 +57,24 @@
     <span class="text-label">Label</span>
 
     <div class="container">
-      <div class="grid grid-col-12">
-        <div class="col-start-1 col-end-4">Item</div>
-        <div class="col-start-7 col-end-13">Item</div>
-      </div>
-      <div class="grid grid-col-6">
-        <div>Item</div>
-        <div>Item</div>
-        <div>Item</div>
-        <div>Item</div>
-        <div>Item</div>
-        <div>Item</div>
+      <div class="grid">
+        <div class="grid-item | sm@col-span-1 lg@col-span-5">*</div>
+        <div class="grid-item | sm@col-span-8 lg@col-span-4">*</div>
       </div>
     </div>
-    <div class="l-section">
-      <div class="l-container"></div>
+
+    <div class="container"></div>
+      <div class="grid --cols10">
+        <div class="grid-item | sm@col-start-3 sm@col-end-8 md@col-start-10 md@col-end-12">*</div>
+        <div class="grid-item | sm@col-span-8 lg@col-span-4">*</div>
+      </div>
     </div>
+
+    <div class="container"></div>
+      <div class="grid --cols6">
+        <div class="grid-item | sm@col-span-2 lg@col-span-4">*</div>
+      </div>
+    </div>
+
   </body>
 </html>
