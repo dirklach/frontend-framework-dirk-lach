@@ -4,14 +4,14 @@
 // Foundations / Grid
 // ==========================================================================
 
-.s-section {
+.l-section {
   --default-margin-y: 2rem;
 
   border: 1px solid red;
   margin: var(--default-margin-y) 0;
 }
 
-.s-container {
+.l-container {
   border: 1px solid blue;
   --default-gap: var(--space-m);
   --default-columns: 12;
