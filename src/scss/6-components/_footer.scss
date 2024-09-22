@@ -2,11 +2,17 @@
 @use "../2-tools" as *;
 
 // ==================================================================
-// Layout / Section
+// Components / Footer
 // ==================================================================
 
-.l-section {
-  --default-margin-y: 2rem;
+.c-footer {
+  background: red;
 
-  margin: var(--default-margin-y) 0;
+  @include bp(md) {
+    background: green;
+  }
+
+  @include bp(xl) {
+    background: blue;
+  }
 }

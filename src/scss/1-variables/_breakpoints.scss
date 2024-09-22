@@ -1,0 +1,16 @@
+// ==================================================================
+// Variables / Breakpoints
+// ==================================================================
+
+/* 
+  Written in SCSS to use it in the breakpoint mixin
+  (2-tools/responsive)
+*/
+
+$breakpoints: (
+  "xs": "640px",
+  "sm": "768px",
+  "md": "1024px",
+  "lg": "1280px",
+  "xl": "1536px",
+);

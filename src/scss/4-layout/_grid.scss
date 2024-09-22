@@ -1,142 +1,53 @@
-@use "spacings" as *;
+@use "../1-variables/" as *;
+@use "../2-tools" as *;
 
-// ==========================================================================
-// Foundations / Grid
-// ==========================================================================
-
-.l-section {
-  --default-margin-y: 2rem;
-
-  border: 1px solid red;
-  margin: var(--default-margin-y) 0;
-}
-
-.l-container {
-  border: 1px solid blue;
-  --default-gap: var(--space-m);
-  --default-columns: 12;
-
-  display: grid;
-  gap: var(--default-gap);
-  grid-template-columns: repeat(var(--default-columns), 1fr);
-
-  > * {
-    background: yellow;
-  }
-}
-
-.grid-item {
-  grid-column: span 12;
-  background: red;
-  width: 100%;
-}
-
-// ==========================================================================
-// Foundations / Grid Column Classes
-// ========================================================================== */
+// ==================================================================
+// Foundations / Grid Column Classes (no breakpoint, default behavior)
+// ==================================================================
 
 @for $i from 1 through 12 {
-  .--cols#{$i} {
-    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
-  }
-}
-
-// ==========================================================================
-// Column Span Classes
-// ==========================================================================
-
-$breakpoints: (
-  "sm": "480px",
-  "md": "768px",
-  "lg": "1024px",
-  "xl": "1280px",
-);
-
-@mixin generate-responsive-classes($i) {
-  .col-#{$i} {
+  [data-col*="col#{$i}"] {
     grid-column: span #{$i} / span #{$i};
   }
+}
 
-  @each $breakpoint, $size in $breakpoints {
-    @media (min-width: $size) {
-      .#{$breakpoint}\:col-#{$i} {
-        grid-column: span #{$i} / span #{$i};
-      }
+// ==================================================================
+// Column Span Classes for `md` breakpoint
+// ==================================================================
+
+@media (min-width: 768px) {
+  @for $i from 1 through 12 {
+    [data-col*="md#{$i}"] {
+      grid-column: span #{$i} / span #{$i};
     }
   }
 }
 
-@for $i from 1 through 12 {
-  @include generate-responsive-classes($i);
+// ==================================================================
+// Column Span Classes for `lg` breakpoint
+// ==================================================================
+
+@media (min-width: 1024px) {
+  @for $i from 1 through 12 {
+    [data-col*="lg#{$i}"] {
+      grid-column: span #{$i} / span #{$i};
+    }
+  }
 }
 
-.col-full {
+// ==================================================================
+// Additional breakpoints if needed (e.g., xl, etc.)
+// ==================================================================
+
+@media (min-width: 1280px) {
+  @for $i from 1 through 12 {
+    [data-col*="xl#{$i}"] {
+      grid-column: span #{$i} / span #{$i};
+    }
+  }
+}
+
+// Full width column
+[data-col*="full"] {
   grid-column: 1 / -1;
-}
-
-// ==========================================================================
-// Grid Gap Classes
-// ==========================================================================
-
-@mixin generate-gap-classes($name, $value) {
-  .gap-#{$name} {
-    gap: $value;
-  }
-
-  .gap-x-#{$name} {
-    column-gap: $value;
-  }
-
-  .gap-y-#{$name} {
-    row-gap: $value;
-  }
-}
-
-@each $name, $value in $spaces {
-  @include generate-gap-classes($name, $value);
-}
-
-// ==========================================================================
-// Column Start/End Utilities
-// ==========================================================================
-
-@mixin generate-start-classes($i) {
-  .col-start-#{$i} {
-    grid-column-start: #{$i};
-  }
-
-  @each $breakpoint, $size in $breakpoints {
-    @media (min-width: $size) {
-      .#{$breakpoint}\:col-start-#{$i} {
-        grid-column-start: #{$i};
-      }
-    }
-  }
-}
-
-@mixin generate-end-classes($i) {
-  .col-end-#{$i} {
-    grid-column-end: #{$i};
-  }
-
-  @each $breakpoint, $size in $breakpoints {
-    @media (min-width: $size) {
-      .#{$breakpoint}\:col-end-#{$i} {
-        grid-column-end: #{$i};
-      }
-    }
-  }
-}
-
-@for $i from 1 through 12 {
-  @include generate-start-classes($i);
-  @include generate-end-classes($i);
-}
-
-.col-start-13 {
-  grid-column-start: 13;
-}
-
-.col-end-13 {
-  grid-column-end: 13;
 }

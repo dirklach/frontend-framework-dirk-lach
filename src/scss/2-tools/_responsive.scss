@@ -1,65 +1,55 @@
-// // ==========================================================================
-// // Foundations / Responsive
-// // ==========================================================================
+@use "../1-variables/" as *;
 
-// // ==========================================================================
-// // Foundations / Responsive > Breakpoints
-// // ==========================================================================
+// ==================================================================
+// Tools / Responsive
+// ==================================================================
 
-// $breakpoints: (
-//   "sm": 640px,
-//   "md": 768px,
-//   "lg": 1024px,
-//   "xl": 1280px,
-//   "2xl": 1536px,
-// );
+// ==================================================================
+// Helper Mixin to handle the media query logic
+// ==================================================================
 
-// // ==========================================================================
-// // Foundations / Responsive > Helper Mixin to handle the media query logic
-// // ==========================================================================
+@mixin _bp($breakpoint, $type) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (#{$type}-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint '#{$breakpoint}'. Available options are: #{map-keys($breakpoints)}.";
+  }
+}
 
-// @mixin _bp($breakpoint, $type) {
-//   @if map-has-key($breakpoints, $breakpoint) {
-//     @media (#{$type}-width: #{map-get($breakpoints, $breakpoint)}) {
-//       @content;
-//     }
-//   } @else {
-//     @error "Invalid breakpoint '#{$breakpoint}'. Available options are: #{map-keys($breakpoints)}.";
-//   }
-// }
+// ==================================================================
+// Mixin for min-width breakpoints
+// ==================================================================
 
-// // ==========================================================================
-// // Foundations / Responsive > Mixin for min-width breakpoints
-// // ==========================================================================
+@mixin bp($breakpoint) {
+  @include _bp($breakpoint, min) {
+    @content;
+  }
+}
 
-// @mixin minbp($breakpoint) {
-//   @include _bp($breakpoint, min) {
-//     @content;
-//   }
-// }
+// ==================================================================
+// Mixin for max-width breakpoints
+// ==================================================================
 
-// // ==========================================================================
-// // Foundations / Responsive > Mixin for max-width breakpoints
-// // ==========================================================================
+@mixin maxbp($breakpoint) {
+  @include _bp($breakpoint, max) {
+    @content;
+  }
+}
 
-// @mixin maxbp($breakpoint) {
-//   @include _bp($breakpoint, max) {
-//     @content;
-//   }
-// }
+// ==================================================================
+// Mixin for a range of min-width to max-width breakpoints
+// ==================================================================
 
-// // ==========================================================================
-// // Foundations / Responsive > Mixin for a range of min-width to max-width breakpoints
-// // ==========================================================================
-
-// @mixin minmaxbp($min-breakpoint, $max-breakpoint) {
-//   @if map-has-key($breakpoints, $min-breakpoint) and
-//     map-has-key($breakpoints, $max-breakpoint)
-//   {
-//     @media (min-width: #{map-get($breakpoints, $min-breakpoint)}) and (max-width: #{map-get($breakpoints, $max-breakpoint)}) {
-//       @content;
-//     }
-//   } @else {
-//     @error "Invalid breakpoints '#{$min-breakpoint}' or '#{$max-breakpoint}'. Available options are: #{map-keys($breakpoints)}.";
-//   }
-// }
+@mixin minmaxbp($min-breakpoint, $max-breakpoint) {
+  @if map-has-key($breakpoints, $min-breakpoint) and
+    map-has-key($breakpoints, $max-breakpoint)
+  {
+    @media (min-width: #{map-get($breakpoints, $min-breakpoint)}) and (max-width: #{map-get($breakpoints, $max-breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoints '#{$min-breakpoint}' or '#{$max-breakpoint}'. Available options are: #{map-keys($breakpoints)}.";
+  }
+}

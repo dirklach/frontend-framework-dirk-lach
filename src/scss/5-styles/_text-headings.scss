@@ -1,0 +1,49 @@
+@use "../1-variables/" as *;
+@use "../2-tools" as *;
+
+// ==================================================================
+// Styles / Text / Headings
+// ==================================================================
+
+// ==================================================================
+// Heading Base Styles
+// ==================================================================
+
+.text-heading {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: var(--weight-bold);
+}
+
+.text-heading-alternative {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: var(--weight-regular);
+}
+
+// ==================================================================
+// Heading Modifier Styles
+// ==================================================================
+
+.--h1 {
+  font-size: var(--size-6);
+}
+
+.--h2 {
+  font-size: var(--size-5);
+}
+
+.--h3 {
+  font-size: var(--size-4);
+}
+
+.--h4 {
+  font-size: var(--size-3);
+}
+
+.--h5 {
+  font-size: var(--size-2);
+}
+
+.--h6 {
+  font-size: var(--size-1);
+  font-weight: var(--weight-regular);
+}

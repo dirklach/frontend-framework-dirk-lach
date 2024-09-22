@@ -1,0 +1,15 @@
+@use "../1-variables/" as *;
+@use "../2-tools" as *;
+
+// ==================================================================
+// Styles / Text / Additional
+// ==================================================================
+
+.text-label {
+  display: block;
+  font-size: var(--size--1);
+  line-height: var(--line-height-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+}
