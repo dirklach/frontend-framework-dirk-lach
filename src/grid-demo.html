@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="main.css" />
   </head>
 
-  <body>
+  <body class="demo">
     <a href="index.html">FriendlyCSS</a>
 
     <section class="section">
@@ -15,9 +15,9 @@
         <div class="col text-label mb-2xs">Responsive Span</div>
       </div>
       <div class="container">
-        <div class="col" data-span="lg:4">A</div>
-        <div class="col" data-span="md:6 lg:4">A</div>
-        <div class="col" data-span="md:6 lg:4">A</div>
+        <div class="col" data-span="lg:4">span lg:4</div>
+        <div class="col" data-span="md:6 lg:4">span md:6 lg:4</div>
+        <div class="col" data-span="md:6 lg:4">span md:6 lg:4</div>
       </div>
     </section>
 
@@ -26,14 +26,14 @@
         <div class="col text-label mb-2xs">Container Auto (equal columns)</div>
       </div>
       <div class="container --auto">
-        <div class="col">A</div>
-        <div class="col">B</div>
-        <div class="col">C</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
+      <div class="container --full">
         <div class="col text-label mb-2xs">
           Offset at start and between columns
         </div>
@@ -41,12 +41,11 @@
       <div class="container">
         <div class="col" data-offset="sm:1 lg:3"></div>
         <div class="col" data-span="sm:4 lg:4">
-          <p class="text-heading --h4">This is a Heading</p>
-          <p>Loorem</p>
+          offset: sm:1 lg:3, span sm:4 lg:4
         </div>
         <div class="col" data-offset="sm:5 lg:3"></div>
         <div class="col" data-span="sm:2 lg:2">
-          <p class="text-heading --h6">Main Second</p>
+          offset: sm:5 lg:3, span sm:2 lg:2
         </div>
       </div>
     </section>
@@ -59,22 +58,11 @@
       <div class="container" data-align="def:start md:center lg:end">
         <div class="col" data-offset="sm:1 lg:3"></div>
         <div class="col" data-span="sm:4 lg:4">
-          <p class="text-heading --h4">This is a Heading</p>
-          <p>
-            Loorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Loorem ipsum dolor sit amet. Loorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Loorem ipsum dolor sit amet.
-          </p>
+          align def:start md:center lg:end, offset sm:1 lg:3, span sm:4 lg:4
         </div>
         <div class="col" data-offset="sm:5 lg:3"></div>
         <div class="col" data-span="sm:2 lg:2">
-          <p class="text-heading --h6">Main Second</p>
+          offset: sm:5 lg:3, span sm:2 lg:2
         </div>
       </div>
     </section>
@@ -84,8 +72,7 @@
       </div>
       <div class="container">
         <div class="col" data-span="def:6" data-area="md:7-12">
-          <p class="text-heading --h4">This is a Heading</p>
-          <p>Loorem</p>
+          span def:6, area md:7-12
         </div>
       </div>
     </section>
@@ -94,11 +81,8 @@
         <div class="col text-label mb-2xs">Areas</div>
       </div>
       <div class="container">
-        <div class="col" data-area="md:1-6">yy</div>
-        <div class="col" data-area="md:7-12">
-          <p class="text-heading --h4">This is a Heading</p>
-          <p>Loorem</p>
-        </div>
+        <div class="col" data-area="md:1-6">area md:1-6</div>
+        <div class="col" data-area="md:7-12">area md:7-12</div>
       </div>
     </section>
     <section class="section">
@@ -106,7 +90,7 @@
         <div class="col text-label mb-2xs">Span</div>
       </div>
       <div class="container">
-        <div class="col" data-span="md:5">aa</div>
+        <div class="col" data-span="md:5">span md:5</div>
       </div>
     </section>
   </body>

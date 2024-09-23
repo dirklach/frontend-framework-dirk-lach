@@ -3259,4 +3259,19 @@ body {
   margin-bottom: var(--space-4xl);
 }
 
+body.demo .section {
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+body.demo .container {
+  border: 1px solid rgba(0, 255, 0, 0.25);
+}
+body.demo .col {
+  background: rgba(0, 255, 0, 0.125);
+  padding: var(--space-3xs);
+}
+body.demo .col[data-offset] {
+  background: rgba(255, 0, 0, 0.125);
+  height: 100%;
+}
+
 /*# sourceMappingURL=main.css.map */

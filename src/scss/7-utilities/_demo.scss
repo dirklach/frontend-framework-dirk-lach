@@ -1,0 +1,23 @@
+@use "../1-variables/" as *;
+@use "../2-tools" as *;
+
+// ==================================================================
+// Utilities / Demo
+// ==================================================================
+
+body.demo {
+  .section {
+    border: 1px solid rgba(255, 0, 0, 0.5);
+  }
+  .container {
+    border: 1px solid rgba(0, 255, 0, 0.25);
+  }
+  .col {
+    background: rgba(0, 255, 0, 0.125);
+    padding: var(--space-3xs);
+  }
+  .col[data-offset] {
+    background: rgba(255, 0, 0, 0.125);
+    height: 100%;
+  }
+}
