@@ -1,0 +1,50 @@
+@use "../1-variables/" as *;
+@use "responsive" as *;
+
+// ==================================================================
+// Layout / Default Site Margin
+// ==================================================================
+
+@mixin default-site-margin {
+  --default-page-padding: var(--space-xs);
+
+  @include bp(sm) {
+    --default-page-padding: var(--space-m);
+  }
+
+  @include bp(md) {
+    --default-page-padding: var(--space-l);
+  }
+
+  @include bp(lg) {
+    --default-page-padding: var(--space-xl);
+  }
+
+  @include bp(xl) {
+    --default-page-padding: var(--space-3xl);
+  }
+}
+
+// ==================================================================
+// Layout / Big Site Margin
+// ==================================================================
+
+@mixin big-site-margin {
+  --big-page-padding: var(--space-xs);
+
+  @include bp(sm) {
+    --big-page-padding: var(--space-s);
+  }
+
+  @include bp(md) {
+    --big-page-padding: var(--space-s);
+  }
+
+  @include bp(lg) {
+    --big-page-padding: var(--space-l);
+  }
+
+  @include bp(xl) {
+    --big-page-padding: calc(var(--space-4xl) * 1);
+  }
+}
