@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initiascale=1.0" />
+    <title>FriendlyCSS</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="col text-label mb-2xs">.container .--auto</div>
+      </div>
+      <div class="container --auto">
+        <div class="col">A</div>
+        <div class="col">B</div>
+        <div class="col">C</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="col text-label mb-2xs">
+          Offset at start and between columns
+        </div>
+      </div>
+      <div class="container">
+        <div class="col" data-offset="sm:1 lg:3"></div>
+        <div class="col" data-span="sm:4 lg:4">
+          <p class="text-heading --h4">This is a Heading</p>
+          <p>Loorem</p>
+        </div>
+        <div class="col" data-offset="sm:5 lg:3"></div>
+        <div class="col" data-span="sm:2 lg:2">
+          <p class="text-heading --h6">Main Second</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="col text-label mb-2xs">
+          Offset at start and between columns + alignment
+        </div>
+      </div>
+      <div class="container" data-align="def:start md:center lg:end">
+        <div class="col" data-offset="sm:1 lg:3"></div>
+        <div class="col" data-span="sm:4 lg:4">
+          <p class="text-heading --h4">This is a Heading</p>
+          <p>
+            Loorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Loorem ipsum dolor sit amet. Loorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Loorem ipsum dolor sit amet.
+          </p>
+        </div>
+        <div class="col" data-offset="sm:5 lg:3"></div>
+        <div class="col" data-span="sm:2 lg:2">
+          <p class="text-heading --h6">Main Second</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="col text-label mb-2xs">From Span to Area</div>
+      </div>
+      <div class="container">
+        <div class="col" data-span="def:6" data-area="md:7-12">
+          <p class="text-heading --h4">This is a Heading</p>
+          <p>Loorem</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="col text-label mb-2xs">Areas</div>
+      </div>
+      <div class="container">
+        <div class="col" data-area="md:1-6">yy</div>
+        <div class="col" data-area="md:7-12">
+          <p class="text-heading --h4">This is a Heading</p>
+          <p>Loorem</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="col text-label mb-2xs">Span</div>
+      </div>
+      <div class="container">
+        <div class="col" data-span="md:5">aa</div>
+      </div>
+    </section>
+  </body>
+</html>

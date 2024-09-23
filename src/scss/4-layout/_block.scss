@@ -5,19 +5,8 @@
 // Layout / Block
 // ==================================================================
 
-.l-block {
+.col {
   grid-column: span 12;
-  background: rgba(0, 255, 76, 0.25); // demo
-}
-
-/* DEMO */
-.l-block[data-offset] {
-  background-color: rgb(255, 255, 255, 0.125);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 1px, transparent 1px),
-    linear-gradient(0, rgba(0, 0, 0, 0.5) 1px, transparent 1px);
-  background-size: 5px 5px;
-  background-position: -1px -1px, -1px -1px;
-  outline-color: black;
 }
 
 // ==================================================================
@@ -34,7 +23,7 @@
   @media (min-width: $min-width) {
     // Handle column spans
     @for $i from 1 through 12 {
-      [data-col*="#{$prefix}\:#{$i}"] {
+      [data-span*="#{$prefix}\:#{$i}"] {
         grid-column: span #{$i} / span #{$i};
       }
     }
