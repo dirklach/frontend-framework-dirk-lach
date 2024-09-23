@@ -18,6 +18,10 @@
   margin-right: auto;
   max-width: 1300px;
 
+  &.--small {
+    max-width: 800px;
+  }
+
   &.--auto {
     // equal columns
     grid-auto-columns: minmax(0, 1fr);

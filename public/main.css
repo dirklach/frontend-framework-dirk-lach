@@ -472,6 +472,9 @@ body {
   margin-right: auto;
   max-width: 1300px;
 }
+.container.--small {
+  max-width: 800px;
+}
 .container.--auto {
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-flow: column;

@@ -10,7 +10,18 @@
   <body>
     <section class="section">
       <div class="container">
-        <div class="col text-label mb-2xs">.container .--auto</div>
+        <div class="col text-label mb-2xs">Responsive Span</div>
+      </div>
+      <div class="container">
+        <div class="col" data-span="lg:4">A</div>
+        <div class="col" data-span="md:6 lg:4">A</div>
+        <div class="col" data-span="md:6 lg:4">A</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="col text-label mb-2xs">Container Auto (equal columns)</div>
       </div>
       <div class="container --auto">
         <div class="col">A</div>
