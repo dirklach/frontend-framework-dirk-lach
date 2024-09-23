@@ -202,6 +202,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  color: inherit;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -435,8 +436,8 @@ textarea {
 }
 
 ::selection {
-  color: var(--color-primary);
-  background: var(--color-secondary);
+  color: var(--color-secondary);
+  background: var(--color-primary);
 }
 
 body {
@@ -455,16 +456,18 @@ body {
   --default-column-gap: var(--space-2xs);
   --default-row-gap: var(--space-2xs);
   --default-columns: 12;
+  --default-container-width: 1600px;
+  --small-container-width: 900px;
   display: grid;
   column-gap: var(--default-column-gap);
   row-gap: var(--default-row-gap);
   grid-template-columns: repeat(var(--default-columns), 1fr);
   margin-left: auto;
   margin-right: auto;
-  max-width: 1300px;
+  max-width: var(--default-container-width);
 }
 .container.--small {
-  max-width: 800px;
+  max-width: var(--small-container-width);
 }
 .container.--auto {
   grid-auto-columns: minmax(0, 1fr);
@@ -3092,6 +3095,7 @@ body {
   background: red;
   color: white;
   padding: var(--space-3xs);
+  cursor: pointer;
 }
 @container c-test-comp (width < 400px) {
   .c-test-comp__cta {
@@ -3099,6 +3103,9 @@ body {
     width: 100%;
     text-align: center;
   }
+}
+.c-test-comp__cta:hover {
+  background: blue;
 }
 
 .mt-0 {

@@ -9,6 +9,8 @@
   --default-column-gap: var(--space-2xs);
   --default-row-gap: var(--space-2xs);
   --default-columns: 12;
+  --default-container-width: 1600px;
+  --small-container-width: 900px;
 
   display: grid;
   column-gap: var(--default-column-gap);
@@ -16,10 +18,10 @@
   grid-template-columns: repeat(var(--default-columns), 1fr);
   margin-left: auto;
   margin-right: auto;
-  max-width: 1300px;
+  max-width: var(--default-container-width);
 
   &.--small {
-    max-width: 800px;
+    max-width: var(--small-container-width);
   }
 
   &.--auto {

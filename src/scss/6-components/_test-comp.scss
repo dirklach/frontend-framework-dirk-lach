@@ -39,10 +39,15 @@
   background: red;
   color: white;
   padding: var(--space-3xs);
+  cursor: pointer;
 
   @container c-test-comp (width < 400px) {
     background: blue;
     width: 100%;
     text-align: center;
+  }
+
+  &:hover {
+    background: blue;
   }
 }
