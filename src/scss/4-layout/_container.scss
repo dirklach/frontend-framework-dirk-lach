@@ -6,8 +6,8 @@
 // ==================================================================
 
 .l-container {
-  --default-column-gap: var(--space-xs);
-  --default-row-gap: var(--space-3xs);
+  --default-column-gap: var(--space-2xs);
+  --default-row-gap: var(--space-2xs);
   --default-columns: 12;
 
   display: grid;
@@ -16,5 +16,5 @@
   grid-template-columns: repeat(var(--default-columns), 1fr);
   margin-left: auto;
   margin-right: auto;
-  max-width: 130 0px;
+  max-width: 1300px;
 }

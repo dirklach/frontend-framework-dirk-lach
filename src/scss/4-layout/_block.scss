@@ -7,4 +7,68 @@
 
 .l-block {
   grid-column: span 12;
+  background: rgba(0, 255, 76, 0.25); // demo
+}
+
+/* DEMO */
+.l-block[data-offset] {
+  background-color: rgb(255, 255, 255, 0.125);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 1px, transparent 1px),
+    linear-gradient(0, rgba(0, 0, 0, 0.5) 1px, transparent 1px);
+  background-size: 5px 5px;
+  background-position: -1px -1px, -1px -1px;
+  outline-color: black;
+}
+
+// ==================================================================
+// Block / Default Offset and Area Behavior
+// ==================================================================
+[data-offset] {
+  display: none;
+}
+
+// ==================================================================
+// Block / Mixin for column and offset classes
+// ==================================================================
+@mixin generate-grid($prefix, $min-width) {
+  @media (min-width: $min-width) {
+    // Handle column spans
+    @for $i from 1 through 12 {
+      [data-col*="#{$prefix}\:#{$i}"] {
+        grid-column: span #{$i} / span #{$i};
+      }
+    }
+
+    // Handle offsets
+    @for $i from 0 through 12 {
+      [data-offset*="#{$prefix}\:#{$i}"] {
+        grid-column: span #{$i} / span #{$i};
+        display: block;
+      }
+    }
+
+    [data-offset*="#{$prefix}0"] {
+      display: none;
+    }
+
+    // Handle start-end columns for data-area
+    @for $start from 1 through 12 {
+      @for $end from ($start + 1) through 13 {
+        // If the end column is 12, we set it to 13 to include the entire width
+        $end-grid-value: if($end == 13, 13, $end);
+
+        [data-area*="#{$prefix}\\:#{$start}-#{$end - 1}"] {
+          grid-column: #{$start} / #{$end-grid-value};
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// ==================================================================
+// Block / Loop through breakpoints map to generate grid and offset classes
+// ==================================================================
+@each $prefix, $min-width in $breakpoints {
+  @include generate-grid($prefix, $min-width);
 }

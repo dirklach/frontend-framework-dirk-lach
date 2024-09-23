@@ -2,52 +2,5 @@
 @use "../2-tools" as *;
 
 // ==================================================================
-// Foundations / Grid Column Classes (no breakpoint, default behavior)
+// Layout / Grid
 // ==================================================================
-
-@for $i from 1 through 12 {
-  [data-col*="col#{$i}"] {
-    grid-column: span #{$i} / span #{$i};
-  }
-}
-
-// ==================================================================
-// Column Span Classes for `md` breakpoint
-// ==================================================================
-
-@media (min-width: 768px) {
-  @for $i from 1 through 12 {
-    [data-col*="md#{$i}"] {
-      grid-column: span #{$i} / span #{$i};
-    }
-  }
-}
-
-// ==================================================================
-// Column Span Classes for `lg` breakpoint
-// ==================================================================
-
-@media (min-width: 1024px) {
-  @for $i from 1 through 12 {
-    [data-col*="lg#{$i}"] {
-      grid-column: span #{$i} / span #{$i};
-    }
-  }
-}
-
-// ==================================================================
-// Additional breakpoints if needed (e.g., xl, etc.)
-// ==================================================================
-
-@media (min-width: 1280px) {
-  @for $i from 1 through 12 {
-    [data-col*="xl#{$i}"] {
-      grid-column: span #{$i} / span #{$i};
-    }
-  }
-}
-
-// Full width column
-[data-col*="full"] {
-  grid-column: 1 / -1;
-}
