@@ -1,0 +1,48 @@
+@use "../1-variables/" as *;
+@use "../2-tools" as *;
+
+// ==================================================================
+// Components / Footer
+// ==================================================================
+
+[data-container="c-test-comp"] {
+  container: c-test-comp / inline-size;
+}
+
+.c-test-comp {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  padding: var(--space-2xs);
+  background: black;
+  border-radius: var(--radius-s);
+}
+
+.c-test-comp__title {
+  padding-bottom: var(--space-2xs);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.c-test-comp__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @container c-test-comp (width < 400px) {
+    flex-direction: column;
+    align-items: start;
+    gap: var(--space-2xs);
+  }
+}
+
+.c-test-comp__cta {
+  background: red;
+  color: white;
+  padding: var(--space-3xs);
+
+  @container c-test-comp (width < 400px) {
+    background: blue;
+    width: 100%;
+    text-align: center;
+  }
+}

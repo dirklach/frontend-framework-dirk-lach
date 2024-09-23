@@ -7,15 +7,6 @@
   background: var(--color-secondary);
 }
 
-body > *,
-body > * > *,
-body > * > * > *,
-body > * > * > * > *,
-body > * > * > * > * > *,
-body > * > * > * > * > * > * {
-  outline: 1px solid rgba(0, 255, 30, 0.25);
-}
-
 body {
   color: var(--color-primary);
   background: var(--color-secondary);
