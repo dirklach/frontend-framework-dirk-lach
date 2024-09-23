@@ -6,7 +6,7 @@
 // ==================================================================
 
 .container {
-  @include default-site-margin;
+  @include default-page-padding;
   --default-column-gap: var(--space-2xs);
   --default-row-gap: var(--space-2xs);
   --default-columns: 12;
@@ -20,7 +20,7 @@
   margin-right: auto;
 
   &.--small {
-    @include big-site-margin;
+    @include big-page-padding;
     width: calc(100vw - var(--big-page-padding) * 2);
   }
 

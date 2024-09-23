@@ -21,3 +21,11 @@ body.demo {
     height: 100%;
   }
 }
+
+body.type-demo {
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+}
