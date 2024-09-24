@@ -1,0 +1,174 @@
+@use "../2-tools/" as *;
+
+// ==================================================================
+// Config
+// ==================================================================
+
+/*  In this file you will find all the variables you need to configure
+    your project to your specific needs. */
+
+:root {
+  // ==================================================================
+  // Breakpoints
+  // ==================================================================
+
+  /*  If you want to configure the breakpoints,
+      go to '2-tools/_breakpoints.scss'
+  
+      Available default breakpoints:
+      - def
+      - xs
+      - sm
+      - md
+      - lg
+      - xl
+      - xxl
+      - xxxl
+
+  */
+
+  // ==================================================================
+  // Colors
+  // ==================================================================
+
+  --color-primary: #dadada;
+  --color-secondary: #242424;
+
+  // ==================================================================
+  // Spacings
+  /*  If you want to add more spacing values, add them here and also
+      in the SCSS variables in 7-utilities/_margin.scss. */
+  // ==================================================================
+
+  --space-3xs: clamp(0.375rem, 0.2663rem + 0.5435vw, 0.6875rem);
+  --space-2xs: clamp(0.8125rem, 0.6386rem + 0.8696vw, 1.3125rem);
+  --space-xs: clamp(1.1875rem, 0.9049rem + 1.413vw, 2rem);
+  --space-s: clamp(1.5625rem, 1.1929rem + 1.8478vw, 2.625rem);
+  --space-m: clamp(2.375rem, 1.8315rem + 2.7174vw, 3.9375rem);
+  --space-l: clamp(3.125rem, 2.3859rem + 3.6957vw, 5.25rem);
+  --space-xl: clamp(5.5rem, 4.2174rem + 6.413vw, 9.1875rem);
+  --space-2xl: clamp(7.0625rem, 5.4103rem + 8.2609vw, 11.8125rem);
+  --space-3xl: clamp(10.9375rem, 8.3505rem + 12.9348vw, 18.375rem);
+  --space-4xl: clamp(15.625rem, 11.9293rem + 18.4783vw, 26.25rem);
+
+  // ==================================================================
+  // Fonts
+  // ==================================================================
+
+  // …
+
+  // ==================================================================
+  // Font Sizes
+  // ==================================================================
+
+  --size--1: clamp(0.844rem, 1.0543rem + -0.2714vw, 1rem);
+  --size-0: clamp(1.125rem, 1.225rem + 0vw, 1.25rem);
+  --size-1: clamp(1.2656rem, 1.1842rem + 0.407vw, 1.4996rem);
+  --size-2: clamp(1.4238rem, 1.2238rem + 1.0003vw, 1.999rem);
+  --size-3: clamp(1.6018rem, 1.2321rem + 1.8485vw, 2.6647rem);
+  --size-4: clamp(1.802rem, 1.1933rem + 3.0434vw, 3.552rem);
+  --size-5: clamp(2.0273rem, 1.0855rem + 4.7087vw, 4.7348rem);
+  --size-6: clamp(2.2807rem, 0.8787rem + 7.0101vw, 8.0115rem);
+
+  // ==================================================================
+  // Line Heights
+  // ==================================================================
+
+  --line-height-2xs: 0.75;
+  --line-height-xs: 0.9;
+  --line-height-s: 1.2;
+  --line-height-m: 1.5;
+  --line-height-l: 1.8;
+  --line-height-xl: 2.1;
+  --line-height-2xl: 2.4;
+
+  // ==================================================================
+  // Weights
+  // ==================================================================
+
+  --weight-light: 300;
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  // ==================================================================
+  // Page Padding
+  // ==================================================================
+
+  --default-page-padding: 2.5vw;
+  --sm-default-page-padding: 2.5vw;
+  --md-default-page-padding: 2.5vw;
+  --lg-default-page-padding: 3vw;
+  --xl-default-page-padding: 3vw;
+  --xxl-default-page-padding: 3vw;
+
+  --big-page-padding: 2.5vw;
+  --sm-big-page-padding: 10vw;
+  --md-big-page-padding: 12.5vw;
+  --lg-big-page-padding: 20vw;
+  --xl-big-page-padding: 20vw;
+  --xxl-big-page-padding: 20vw;
+
+  // ==================================================================
+  // Radius
+  // ==================================================================
+
+  --radius-xs: 0.25rem;
+  --radius-s: 0.5rem;
+  --radius-m: 1rem;
+  --radius-l: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 3rem;
+
+  // ==================================================================
+  // Speeds
+  // ==================================================================
+
+  --speed-faster: 0.1s;
+  --speed-fast: 0.3s;
+  --speed-normal: 0.5s;
+  --speed-slow: 0.8s;
+  --speed-slower: 1s;
+
+  // ==================================================================
+  // Transitions
+  // ==================================================================
+
+  --transition-alpha: var(--speed-fast) var(--power1-ease-out);
+
+  // ==================================================================
+  // Easings
+  // ==================================================================
+
+  --elastic-ease-in: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  --elastic-ease-out: cubic-bezier(0.25, 1.46, 0.45, 1.6);
+  --elastic-ease-in-out: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  --bounce-ease-in: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  --bounce-ease-out: cubic-bezier(0.19, 1, 0.22, 1);
+  --bounce-ease-in-out: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  --back-ease-in: cubic-bezier(0.36, 0, 0.66, -0.56);
+  --back-ease-out: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --back-ease-in-out: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  --sine-ease-in: cubic-bezier(0.47, 0, 0.745, 0.715);
+  --sine-ease-out: cubic-bezier(0.39, 0.575, 0.565, 1);
+  --sine-ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --circ-ease-in: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  --circ-ease-out: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --circ-ease-in-out: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  --expo-ease-in: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --expo-ease-out: cubic-bezier(0.19, 1, 0.22, 1);
+  --expo-ease-in-out: cubic-bezier(1, 0, 0, 1);
+  --power1-ease-in: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --power1-ease-out: cubic-bezier(0.55, 0, 0.85, 0.315);
+  --power1-ease-in-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  --power2-ease-in: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --power2-ease-out: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  --power2-ease-in-out: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --power3-ease-in: cubic-bezier(0.33, 0.51, 0.68, 0.98);
+  --power3-ease-out: cubic-bezier(0.67, 0.01, 0.83, 0.59);
+  --power3-ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --power4-ease-in: cubic-bezier(0.5, 0, 0.75, 0.5);
+  --power4-ease-out: cubic-bezier(0.25, 0.5, 0.5, 1);
+  --power4-ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+}

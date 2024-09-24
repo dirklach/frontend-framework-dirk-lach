@@ -5,6 +5,31 @@
 // Utilities / Margin
 // ==================================================================
 
+// ==================================================================
+// Utilities / Margin / Spacings
+/*  These variables simply refer to the CSS variables in the config file.
+    If you want to add more spacing values, add them here and in
+    the CSS variables (../1-variables/_config.scss). */
+// ==================================================================
+
+$spacings: (
+  "0": 0,
+  "3xs": var(--space-3xs),
+  "2xs": var(--space-2xs),
+  "xs": var(--space-xs),
+  "s": var(--space-s),
+  "m": var(--space-m),
+  "l": var(--space-l),
+  "xl": var(--space-xl),
+  "2xl": var(--space-2xl),
+  "3xl": var(--space-3xl),
+  "4xl": var(--space-4xl),
+);
+
+// ==================================================================
+// Utilities / Margin / Classes
+// ==================================================================
+
 .mt-0 {
   margin-top: 0;
 }
@@ -13,7 +38,7 @@
   margin-bottom: 0;
 }
 
-@each $name, $value in $spaces {
+@each $name, $value in $spacings {
   .mt-#{$name} {
     margin-top: $value;
   }

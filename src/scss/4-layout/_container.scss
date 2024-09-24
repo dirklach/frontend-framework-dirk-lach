@@ -6,7 +6,6 @@
 // ==================================================================
 
 .container {
-  @include default-page-padding;
   --default-column-gap: var(--space-2xs);
   --default-row-gap: var(--space-2xs);
   --default-columns: 12;
@@ -15,19 +14,56 @@
   column-gap: var(--default-column-gap);
   row-gap: var(--default-row-gap);
   grid-template-columns: repeat(var(--default-columns), 1fr);
-  width: calc(100vw - var(--default-page-padding) * 2);
-  margin-left: auto;
-  margin-right: auto;
-
-  &.--small {
-    @include big-page-padding;
-    width: calc(100vw - var(--big-page-padding) * 2);
-  }
+  margin-left: var(--default-page-padding);
+  margin-right: var(--default-page-padding);
 
   &.--auto {
     // equal columns
     grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: column;
+  }
+
+  &.--align-right {
+    margin-right: 0;
+  }
+
+  &.--align-left {
+    margin-left: 0;
+  }
+
+  &.--small {
+    margin-left: var(--big-page-padding);
+    margin-right: var(--big-page-padding);
+
+    @include bp(sm) {
+      margin-left: var(--sm-big-page-padding);
+      margin-right: var(--sm-big-page-padding);
+    }
+
+    @include bp(md) {
+      margin-left: var(--md-big-page-padding);
+      margin-right: var(--md-big-page-padding);
+    }
+
+    @include bp(lg) {
+      margin-left: var(--lg-big-page-padding);
+      margin-right: var(--lg-big-page-padding);
+    }
+
+    @include bp(xl) {
+      margin-left: var(--xl-big-page-padding);
+      margin-right: var(--xl-big-page-padding);
+    }
+
+    @include bp(xxl) {
+      margin-left: var(--xxl-big-page-padding);
+      margin-right: var(--xxl-big-page-padding);
+    }
+  }
+
+  &.--full {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
