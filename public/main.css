@@ -103,6 +103,10 @@
   --power4-ease-in: cubic-bezier(0.5, 0, 0.75, 0.5);
   --power4-ease-out: cubic-bezier(0.25, 0.5, 0.5, 1);
   --power4-ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --default-column-gap: var(--space-2xs);
+  --default-row-gap: var(--space-2xs);
+  --default-columns: 12;
+  --default-margin-y: var(--space-l);
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -445,14 +449,10 @@ body {
 }
 
 .section {
-  --default-margin-y: var(--space-l);
   margin: var(--default-margin-y) 0;
 }
 
 .container {
-  --default-column-gap: var(--space-2xs);
-  --default-row-gap: var(--space-2xs);
-  --default-columns: 12;
   display: grid;
   column-gap: var(--default-column-gap);
   row-gap: var(--default-row-gap);

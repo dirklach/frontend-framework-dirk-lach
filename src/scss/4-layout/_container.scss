@@ -6,10 +6,6 @@
 // ==================================================================
 
 .container {
-  --default-column-gap: var(--space-2xs);
-  --default-row-gap: var(--space-2xs);
-  --default-columns: 12;
-
   display: grid;
   column-gap: var(--default-column-gap);
   row-gap: var(--default-row-gap);

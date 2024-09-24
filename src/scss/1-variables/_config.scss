@@ -171,4 +171,18 @@
   --power4-ease-in: cubic-bezier(0.5, 0, 0.75, 0.5);
   --power4-ease-out: cubic-bezier(0.25, 0.5, 0.5, 1);
   --power4-ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+
+  // ==================================================================
+  // Container configuration
+  // ==================================================================
+
+  --default-column-gap: var(--space-2xs);
+  --default-row-gap: var(--space-2xs);
+  --default-columns: 12;
+
+  // ==================================================================
+  // Section configuration
+  // ==================================================================
+
+  --default-margin-y: var(--space-l);
 }
