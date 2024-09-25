@@ -4,6 +4,15 @@
 
 A small CSS framework to help you set up your project in a clean and scalable way. FriendlyCSS offers you a flexible layout system (supports features such as grid, subgrid, media-queries and container-queries) and a structure to make your frontend workflow simple.<br><br>
 
+- **Variables**: A single config file with all variables helps you to keep everything in view (breakpoints, colors, spacings, fonts, font sizes, line heights, font weights, page padding, border radius, speeds, easings, transitions, container and section configuration)
+- **Tools**: By default, a breakpoint tool (mixin) is included to make working with media queries easier for you.
+- **Generic**: A reset file and global styles for HTML elements without classes.
+- **Layout**: A flexible and responsive layout system that supports features like grid, subgrid, media queries, container queries, and alignment.
+- **Styles**: All your text styles are organized in one place, grouped by categories such as heading styles, copy styles, and additional styles. You can define base styles and modifier styles for a modular typography system.
+- **Components**: Add your individual components.
+- **Utilities**: Some tiny helper classes are included (by default, there are margin classes to control the margins for layout parts).
+- **Themes**: Overwrite variables within a theme.
+
 Created by Dirk Lach, Designer and Developer.
 
 <!--
