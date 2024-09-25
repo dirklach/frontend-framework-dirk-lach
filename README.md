@@ -17,7 +17,7 @@ FriendlyCSS is designed to be easy for developers to use (and read) and reflects
 - **Utilities**: Some tiny helper classes are included (by default, there are margin classes to control the margins for layout parts).
 - **Themes**: Overwrite variables within a theme.
 
-**Demo**:
+**Demo**:<br>
 https://friendlycss.vercel.app/ <br>
 *This is a very simplified demo, for testing and development purposes during the creation of the framework. A proper demo and documentation will be available soon.*<br>
 
