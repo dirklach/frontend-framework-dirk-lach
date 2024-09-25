@@ -2,8 +2,8 @@
 
 A small CSS framework to help you set up your project in a clean and scalable way. FriendlyCSS offers you a flexible layout system (supports features such as grid, subgrid, media queries, container queries, fluid type scale …) and a structure to make your frontend workflow simple.<br>
 
-| **Version:** OPEN BETA 1 | **Author:** Dirk Lach |
-| --- | --- |
+| **Version:** OPEN BETA 1 | **Author:** Dirk Lach | Build in Public |
+| --- | --- | --- |
 
 FriendlyCSS is designed to be easy for developers to use (and read) and reflects the principles of how design concepts (visual systems focused on scalability and modularity) are traditionally developed.<br><br>
 
