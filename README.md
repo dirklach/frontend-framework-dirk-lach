@@ -7,6 +7,7 @@ A small CSS framework to help you set up your project in a clean and scalable wa
 
 FriendlyCSS is designed to be easy for developers to use (and read) and reflects the principles of how design concepts (visual systems focused on scalability and modularity) are traditionally developed.<br><br>
 
+**SCSS Folder Structure**:
 - **Variables**: A single config file with all variables helps you to keep everything in view (breakpoints, colors, spacings, fonts, font sizes, line heights, font weights, page padding, border radius, speeds, easings, transitions, container and section configuration)
 - **Tools**: By default, a breakpoint tool (mixin) is included to make working with media queries easier for you.
 - **Generic**: A reset file and global styles for HTML elements without classes.
