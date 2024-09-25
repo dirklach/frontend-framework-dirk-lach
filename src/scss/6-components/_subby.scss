@@ -1,0 +1,50 @@
+@use "../1-variables/" as *;
+@use "../2-tools" as *;
+
+// ==================================================================
+// Components / Subby
+// ==================================================================
+
+.c-subby {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  background: red;
+  border: 2px solid lime;
+}
+
+.c-subby__head {
+  background: blue;
+  grid-column: span 3;
+  aspect-ratio: 2/1;
+
+  @include bp(lg) {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.c-subby__main {
+  background: lime;
+  gap: var(--space-2xs);
+  color: black;
+  grid-column: span 5;
+
+  h1 {
+    border-bottom: 1px solid black;
+    padding-bottom: 24px;
+  }
+}
+
+.c-subby__deep {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-2xs);
+  background: orange;
+  grid-column: 3/6;
+}
+.c-subby__dive {
+  color: white;
+  background: blue;
+  grid-column: 4/5;
+}

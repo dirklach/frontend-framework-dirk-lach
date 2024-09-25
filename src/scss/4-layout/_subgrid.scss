@@ -1,0 +1,74 @@
+@use "../1-variables/" as *;
+@use "../2-tools" as *;
+
+// ==================================================================
+// Utilities / Subgrid
+// ==================================================================
+
+@mixin subgrid {
+  display: grid !important;
+  gap: inherit !important;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  background: red;
+}
+
+.def\:subgrid {
+  grid-column: 1/ -1;
+  @include bp(def) {
+    @include subgrid;
+  }
+}
+
+.sm\:subgrid {
+  grid-column: 1/ -1;
+  @include bp(sm) {
+    @include subgrid;
+  }
+}
+
+.md\:subgrid {
+  grid-column: 1/ -1;
+  @include bp(md) {
+    @include subgrid;
+  }
+}
+
+.lg\:subgrid {
+  grid-column: 1/ -1;
+  @include bp(lg) {
+    @include subgrid;
+  }
+}
+
+.xl\:subgrid {
+  grid-column: 1/ -1;
+  @include bp(xl) {
+    @include subgrid;
+  }
+}
+
+.xxl\:subgrid {
+  grid-column: 1/ -1;
+  @include bp(xxl) {
+    @include subgrid;
+  }
+}
+
+.xxl\:subgrid {
+  grid-column: 1/ -1;
+  @include bp(xxl) {
+    @include subgrid;
+  }
+}
+
+.subgrid {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  background: red;
+}
+
+.sub-col {
+  background: rgb(0, 30, 255);
+}
