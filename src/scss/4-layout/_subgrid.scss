@@ -5,6 +5,58 @@
 // Utilities / Subgrid
 // ==================================================================
 
+/*
+
+// ==================================================================
+// Usage
+// ==================================================================
+
+// ------------------------------------------------------------------
+// Create a subgrid (inherit grid from parent) for all breakpoints
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container">
+    <div class="c-my-component | subgrid">
+      <div class="col md:4">…</div>
+      <div class="col md:4">…</div>
+      <div class="col md:4">…</div>
+    </div>
+  </div>
+</section>
+
+// ------------------------------------------------------------------
+// Create a subgrid at and above md breakpoint
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container">
+    <div class="c-my-component | md:subgrid">
+      <div class="col md:4">…</div>
+      <div class="col md:4">…</div>
+      <div class="col md:4">…</div>
+    </div>
+  </div>
+</section>
+
+
+// ------------------------------------------------------------------
+// Inherit the subgrid more than once
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container">
+    <div class="c-my-component | md:subgrid">
+      <div class="col md:6 md:subgrid / lg:8">
+        <div class="col md:2-4 / lg:3-5">…</div>
+      </div>
+      <div class="col md:6">…</div>
+    </div>
+  </div>
+</section>
+
+*/
+
 @mixin subgrid {
   display: grid !important;
   gap: inherit !important;
@@ -13,7 +65,7 @@
   background: red;
 }
 
-.def\:subgrid {
+.subgrid {
   grid-column: 1/ -1;
   @include bp(def) {
     @include subgrid;
@@ -60,15 +112,4 @@
   @include bp(xxl) {
     @include subgrid;
   }
-}
-
-.subgrid {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-column: 1 / -1;
-  background: red;
-}
-
-.sub-col {
-  background: rgb(0, 30, 255);
 }

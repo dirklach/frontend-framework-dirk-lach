@@ -1,6 +1,57 @@
 // ==================================================================
-// Tools / Responsive
+// Tools / Breakpoints
 // ==================================================================
+
+/*
+
+This tool provides mixins to handle media queries in a more efficient way.
+
+// ==================================================================
+// Usage
+// ==================================================================
+
+// ------------------------------------------------------------------
+// min-width breakpoint
+// ------------------------------------------------------------------
+// Styles will be applied from 1024px and up
+// ------------------------------------------------------------------
+
+@include bp('md') {
+  background: red;
+}
+
+// ------------------------------------------------------------------
+// max-width breakpoint
+// ------------------------------------------------------------------
+// Styles will be applied up to 1024px
+// ------------------------------------------------------------------
+
+@include maxbp('md') {
+  background: red;
+}
+
+// ------------------------------------------------------------------
+// min-width to max-width breakpoint
+// ------------------------------------------------------------------
+// Styles will be applied from 768px to 1280px
+// ------------------------------------------------------------------
+
+@include minmaxbp('sm', 'lg') {
+  background: red;
+}
+
+*/
+
+// ==================================================================
+// Breakpoints
+// ==================================================================
+
+/*
+    If you want to change the values of the breakpoints, please
+    change them in the variables below and in the
+    custom properties in 1-variables/_config.scss.
+    Make sure that the values are always identical to avoid conflicts.
+*/
 
 $breakpoints: (
   "def": 0px,
@@ -16,6 +67,7 @@ $breakpoints: (
 // ==================================================================
 // Helper Mixin to handle the media query logic
 // ==================================================================
+
 @mixin _bp($breakpoint, $type) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media (#{$type}-width: #{map-get($breakpoints, $breakpoint)}) {

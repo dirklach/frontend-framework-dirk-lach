@@ -2,61 +2,122 @@
 @use "../2-tools" as *;
 
 // ==================================================================
-// Layout / Block
+// Layout / Col
 // ==================================================================
+
+/*
+
+// ==================================================================
+// Usage
+// ==================================================================
+
+// ------------------------------------------------------------------
+// Without column definition (always full width)
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container">
+    <div class="col">…</div>
+  </div>
+</section>
+
+// ------------------------------------------------------------------
+// Span columns:
+// ------------------------------------------------------------------
+// - def, xs, sm: 12 columns (default)
+// - md: 6 columns
+// - lg, xl, xxl, xxxl: 4 columns
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container">
+    <div class="col md:6 / lg:4">…</div>
+  </div>
+</section>
+
+// ------------------------------------------------------------------
+// Offset & span columns:
+// ------------------------------------------------------------------
+// - def, xs, sm: 0 columns offset + 12 columns
+// - md: 2 columns offset + 6 columns 
+// - lg, xl, xxl, xxxl: 2 columns offset + 4 columns
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container">
+    <div class="col md:off-2">…</div>
+    <div class="col md:6 / lg:4">…</div>
+  </div>
+</section>
+
+
+// ------------------------------------------------------------------
+// Column area:
+// ------------------------------------------------------------------
+// - def, xs, sm: 12 columns (default)
+// - md: column 2-5
+// - lg, xl, xxl, xxxl: column 4-10
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container">
+    <div class="col md:2-5 / lg:4-10">…</div>
+  </div>
+</section>
+
+*/
 
 .col {
   grid-column: span 12;
 }
 
 // ==================================================================
-// Block / Default Offset and Area Behavior
-// ==================================================================
-[data-offset] {
-  display: none;
-}
-
-// ==================================================================
-// Block / Mixin for column and offset classes
+// Mixin for column and offset classes
 // ==================================================================
 @mixin generate-grid($prefix, $min-width) {
   @media (min-width: $min-width) {
     // Handle column spans
     @for $i from 1 through 12 {
-      [data-span*="#{$prefix}\:#{$i}"] {
+      .#{$prefix}\:#{$i} {
         grid-column: span #{$i} / span #{$i};
       }
     }
 
     // Handle offsets
     @for $i from 0 through 12 {
-      [data-offset*="#{$prefix}\:#{$i}"] {
+      .#{$prefix}\:off-#{$i} {
         grid-column: span #{$i} / span #{$i};
         display: block;
       }
     }
 
-    [data-offset*="#{$prefix}0"] {
+    .#{$prefix}-off-0 {
       display: none;
     }
 
-    // Handle start-end columns for data-area
+    // Handle start-end columns for area spans
     @for $start from 1 through 12 {
       @for $end from ($start + 1) through 13 {
         // If the end column is 12, we set it to 13 to include the entire width
         $end-grid-value: if($end == 13, 13, $end);
 
-        [data-area*="#{$prefix}\\:#{$start}-#{$end - 1}"] {
+        .#{$prefix}\:#{$start}-#{$end - 1} {
           grid-column: #{$start} / #{$end-grid-value};
           display: block;
         }
+      }
+    }
+    // Handle starting column only
+    @for $start from 1 through 12 {
+      .#{$prefix}\:start-#{$start} {
+        grid-column-start: #{$start};
       }
     }
   }
 }
 
 // ==================================================================
-// Block / Loop through breakpoints map to generate grid and offset classes
+// Loop through breakpoints map to generate grid and offset classes
 // ==================================================================
 @each $prefix, $min-width in $breakpoints {
   @include generate-grid($prefix, $min-width);

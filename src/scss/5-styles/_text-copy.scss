@@ -6,29 +6,30 @@
 // ==================================================================
 
 // ==================================================================
-// Copy Base Styles
+// Text Copy Base Style
 // ==================================================================
-
-.text-copy-s {
-  font-size: var(--size--1);
-}
 
 .text-copy {
   font-size: var(--size-0);
-}
+  color: #666;
 
-.text-copy-l {
-  font-size: var(--size-1);
-}
+  // ==================================================================
+  // Text Copy Modifier Styles
+  // ==================================================================
 
-// ==================================================================
-// Copy Modifier Styles
-// ==================================================================
+  &.--s {
+    font-size: var(--size--1);
+  }
 
-.--bold {
-  font-weight: var(--weight-bold);
-}
+  &.--l {
+    font-size: var(--size-1);
+  }
 
-.--underline {
-  text-decoration: underline;
+  &.--bold {
+    font-weight: var(--weight-bold);
+  }
+
+  &.--underline {
+    text-decoration: underline;
+  }
 }

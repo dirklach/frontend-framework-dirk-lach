@@ -5,6 +5,74 @@
 // Layout / Container
 // ==================================================================
 
+/*
+
+// ==================================================================
+// Usage
+// ==================================================================
+
+// ------------------------------------------------------------------
+// Container Default
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container">
+    <div class="col">…</div>
+  </div>
+</section>
+
+// ------------------------------------------------------------------
+// Container Small
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container --small">
+    <div class="col">…</div>
+  </div>
+</section>
+
+// ------------------------------------------------------------------
+// Container Full
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container --full">
+    <div class="col">…</div>
+  </div>
+</section>
+
+// ------------------------------------------------------------------
+// Container Align Right
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container --align-right">
+    <div class="col">…</div>
+  </div>
+</section>
+
+// ------------------------------------------------------------------
+// Container Align Left
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container --align-left">
+    <div class="col">…</div>
+  </div>
+</section>
+
+// ------------------------------------------------------------------
+// Container Auto (equal columns)
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container --auto">
+    <div class="col">…</div>
+  </div>
+</section>
+
+*/
+
 .container {
   display: grid;
   column-gap: var(--default-column-gap);

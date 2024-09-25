@@ -2,6 +2,12 @@
 // Generic / Global
 // ==================================================================
 
+/*
+
+Styling for elements without classes.
+
+*/
+
 ::selection {
   color: var(--color-secondary);
   background: var(--color-primary);

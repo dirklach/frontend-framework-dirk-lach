@@ -4,15 +4,23 @@
 // Config
 // ==================================================================
 
+/*
+
+This configuration file contains all the global variables
+that are available throughout the project.
+
+*/
+
 :root {
   // ==================================================================
   // Breakpoints
   // ==================================================================
 
-  /*  If you want to change the values of the breakpoints, please
-      change them in the custom properties below and in the
-      SCSS variables in 2-tools/breakpoints.scss.
-      Make sure that the values are always identical.
+  /* 
+    If you want to change the values of the breakpoints, please
+    change them in the custom properties below and in the
+    SCSS variables in 2-tools/_breakpoints.scss.
+    Make sure that the values are always identical to avoid conflicts.
   */
 
   --def: 0px;
