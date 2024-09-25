@@ -1,20 +1,17 @@
-/*  In this file you will find all the variables you need to configure
-    your project to your specific needs. */
 :root {
-  /*  If you want to configure the breakpoints,
-      go to '2-tools/_breakpoints.scss'
-
-      Available default breakpoints:
-      - def
-      - xs
-      - sm
-      - md
-      - lg
-      - xl
-      - xxl
-      - xxxl
-
+  /*  If you want to change the values of the breakpoints, please
+      change them in the custom properties below and in the
+      SCSS variables in 2-tools/breakpoints.scss.
+      Make sure that the values are always identical.
   */
+  --def: 0px;
+  --xs: 640px;
+  --sm: 768px;
+  --md: 1024px;
+  --lg: 1280px;
+  --xl: 1536px;
+  --xxl: 1800px;
+  --xxxl: 2400px;
   --color-primary: #dadada;
   --color-secondary: #242424;
   /*  If you want to add more spacing values, add them here and also
@@ -72,7 +69,6 @@
   --speed-normal: 0.5s;
   --speed-slow: 0.8s;
   --speed-slower: 1s;
-  --transition-alpha: var(--speed-fast) var(--power1-ease-out);
   --elastic-ease-in: cubic-bezier(0.6, -0.28, 0.735, 0.045);
   --elastic-ease-out: cubic-bezier(0.25, 1.46, 0.45, 1.6);
   --elastic-ease-in-out: cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -103,6 +99,7 @@
   --power4-ease-in: cubic-bezier(0.5, 0, 0.75, 0.5);
   --power4-ease-out: cubic-bezier(0.25, 0.5, 0.5, 1);
   --power4-ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --transition-alpha: var(--speed-fast) var(--power1-ease-out);
   --default-column-gap: var(--space-2xs);
   --default-row-gap: var(--space-2xs);
   --default-columns: 12;

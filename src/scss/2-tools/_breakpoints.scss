@@ -16,7 +16,6 @@ $breakpoints: (
 // ==================================================================
 // Helper Mixin to handle the media query logic
 // ==================================================================
-
 @mixin _bp($breakpoint, $type) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media (#{$type}-width: #{map-get($breakpoints, $breakpoint)}) {

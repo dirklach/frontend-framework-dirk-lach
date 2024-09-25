@@ -1,9 +1,10 @@
 # FriendlyCSS
 
-**My very own approach to writing friendly and scalable CSS.**<br><br>
+**Beta**
 
-This is a living document, based on best practices and personal experience.<br>
-Written by Dirk Lach, Designer and Developer.
+A small CSS framework to help you set up your project in a clean and scalable way. FriendlyCSS offers you a flexible layout system (supports features such as grid, subgrid, media-queries and container-queries) and a structure to make your frontend workflow simple.<br><br>
+
+Created by Dirk Lach, Designer and Developer.
 
 <!--
 Playground: [https://friendlycss.vercel.app/](https://friendlycss.vercel.app/)
