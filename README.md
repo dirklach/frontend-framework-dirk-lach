@@ -22,6 +22,7 @@ https://friendlycss.vercel.app/ <br>
 *This is a very simplified demo, for testing and development purposes during the creation of the framework. A proper demo and documentation will be available soon.*<br>
 
 Created by Dirk Lach, Designer and Developer.
+[www.dirklach.com](https://www.dirklach.com)
 
 <!--
 Playground: [https://friendlycss.vercel.app/](https://friendlycss.vercel.app/)
