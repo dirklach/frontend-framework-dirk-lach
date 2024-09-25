@@ -17,7 +17,8 @@ FriendlyCSS is designed to be easy for developers to use (and read) and reflects
 
 Created by Dirk Lach, Designer and Developer.
 
-Very simplified demo (for testing and development purposes during the creation of the framework): https://friendlycss.vercel.app/
+**Demo:** https://friendlycss.vercel.app/
+Very simplified demo (for testing and development purposes during the creation of the framework)
 (A proper demo and documentation will be available soon)
 
 <!--
