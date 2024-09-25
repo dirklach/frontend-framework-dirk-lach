@@ -1,6 +1,6 @@
 # FriendlyCSS
 
-**BETA**
+**Version: OPEN BETA 1**
 
 A small CSS framework to help you set up your project in a clean and scalable way. FriendlyCSS offers you a flexible layout system (supports features such as grid, subgrid, media queries and container queries) and a structure to make your frontend workflow simple.<br><br>
 
