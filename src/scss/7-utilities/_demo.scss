@@ -6,19 +6,67 @@
 // ==================================================================
 
 body.demo {
+  background: black;
+
   .section {
-    border: 1px solid rgba(255, 0, 0, 0.5);
+    position: relative;
+    background: rgba(96, 96, 96, 0.125);
+    outline: 1px dashed rgba(255, 255, 255, 0.25);
+    &::before {
+      content: "section";
+      position: absolute;
+      inset: 8px auto auto 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
   }
   .container {
-    border: 1px solid rgba(0, 255, 0, 0.25);
+    position: relative;
+    background: rgba(96, 96, 96, 0.125);
+    outline: 1px dashed rgba(255, 255, 255, 0.25);
+    &::before {
+      content: "container";
+      position: absolute;
+      inset: 8px auto auto 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
   }
   .col {
-    background: rgba(0, 255, 0, 0.125);
-    padding: var(--space-3xs);
+    position: relative;
+    background: rgba(96, 96, 96, 0.33);
+    outline: 1px dashed rgba(255, 255, 255, 1);
+    min-height: var(--space-l);
+    &::before {
+      content: "col";
+      position: absolute;
+      inset: 8px auto auto 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
   }
-  .col[data-offset] {
-    background: rgba(255, 0, 0, 0.125);
+  [class*="off-"] {
+    position: relative;
+    outline: 1px dashed rgba(94, 94, 94, 0.125);
+    background: repeating-linear-gradient(
+      -55deg,
+      #222,
+      #222 5px,
+      #000 5px,
+      #000 10px
+    );
     height: 100%;
+    &::before {
+      content: "off";
+      position: absolute;
+      inset: 8px auto auto 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
   }
 }
 

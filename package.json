@@ -6,10 +6,10 @@
   "scripts": {
     "build": "sass src/scss/main.scss public/main.css && pnpm copy:html",
     "watch:sass": "sass --watch src/scss/main.scss public/main.css",
-    "serve": "browser-sync start --server public --files 'public/*.css, public/demo/*.html'",
+    "serve": "browser-sync start --server public --files 'public/**/*.css, public/**/*.html'",
     "copy:html": "cp src/demo/*.html public/",
     "watch:html": "onchange 'src/**/*.html' -- pnpm copy:html",
-    "dev": "concurrently \"pnpm watch:sass\" \"pnpm watch:html\" \"pnpm serve\""
+    "dev": "concurrently \"pnpm watch:sass\" \"pnpm watch:html\" \"pnpm copy:html && pnpm serve\""
   },
   "devDependencies": {
     "sass": "^1.55.0",

@@ -57,7 +57,7 @@ that are available throughout the project.
     SCSS variables in 2-tools/_breakpoints.scss.
     Make sure that the values are always identical to avoid conflicts.
   */
-  --def: 0px;
+  --df: 0px;
   --xs: 640px;
   --sm: 768px;
   --md: 1024px;
@@ -551,7 +551,7 @@ body {
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container --align-right">
+  <div class="container --right">
     <div class="col">…</div>
   </div>
 </section>
@@ -561,7 +561,7 @@ body {
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container --align-left">
+  <div class="container --left">
     <div class="col">…</div>
   </div>
 </section>
@@ -589,10 +589,10 @@ body {
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-flow: column;
 }
-.container.--align-right {
+.container.--right {
   margin-right: 0;
 }
-.container.--align-left {
+.container.--left {
   margin-left: 0;
 }
 .container.--small {
@@ -639,13 +639,13 @@ body {
 }
 
 @media (min-width: 0px) {
-  [data-align*="def:start"] {
+  [data-align*="df:start"] {
     align-items: start;
   }
-  [data-align*="def:center"] {
+  [data-align*="df:center"] {
     align-items: center;
   }
-  [data-align*="def:end"] {
+  [data-align*="df:end"] {
     align-items: end;
   }
 }
@@ -745,7 +745,7 @@ body {
 // ------------------------------------------------------------------
 // Span columns:
 // ------------------------------------------------------------------
-// - def, xs, sm: 12 columns (default)
+// - df, xs, sm: 12 columns (default)
 // - md: 6 columns
 // - lg, xl, xxl, xxxl: 4 columns
 // ------------------------------------------------------------------
@@ -759,7 +759,7 @@ body {
 // ------------------------------------------------------------------
 // Offset & span columns:
 // ------------------------------------------------------------------
-// - def, xs, sm: 0 columns offset + 12 columns
+// - df, xs, sm: 0 columns offset + 12 columns
 // - md: 2 columns offset + 6 columns 
 // - lg, xl, xxl, xxxl: 2 columns offset + 4 columns
 // ------------------------------------------------------------------
@@ -775,7 +775,7 @@ body {
 // ------------------------------------------------------------------
 // Column area:
 // ------------------------------------------------------------------
-// - def, xs, sm: 12 columns (default)
+// - df, xs, sm: 12 columns (default)
 // - md: column 2-5
 // - lg, xl, xxl, xxxl: column 4-10
 // ------------------------------------------------------------------
@@ -792,443 +792,443 @@ body {
 }
 
 @media (min-width: 0px) {
-  .def\:1 {
+  .df\:1 {
     grid-column: span 1/span 1;
   }
-  .def\:2 {
+  .df\:2 {
     grid-column: span 2/span 2;
   }
-  .def\:3 {
+  .df\:3 {
     grid-column: span 3/span 3;
   }
-  .def\:4 {
+  .df\:4 {
     grid-column: span 4/span 4;
   }
-  .def\:5 {
+  .df\:5 {
     grid-column: span 5/span 5;
   }
-  .def\:6 {
+  .df\:6 {
     grid-column: span 6/span 6;
   }
-  .def\:7 {
+  .df\:7 {
     grid-column: span 7/span 7;
   }
-  .def\:8 {
+  .df\:8 {
     grid-column: span 8/span 8;
   }
-  .def\:9 {
+  .df\:9 {
     grid-column: span 9/span 9;
   }
-  .def\:10 {
+  .df\:10 {
     grid-column: span 10/span 10;
   }
-  .def\:11 {
+  .df\:11 {
     grid-column: span 11/span 11;
   }
-  .def\:12 {
+  .df\:12 {
     grid-column: span 12/span 12;
   }
-  .def\:off-0 {
+  .df\:off-0 {
     grid-column: span 0/span 0;
     display: block;
   }
-  .def\:off-1 {
+  .df\:off-1 {
     grid-column: span 1/span 1;
     display: block;
   }
-  .def\:off-2 {
+  .df\:off-2 {
     grid-column: span 2/span 2;
     display: block;
   }
-  .def\:off-3 {
+  .df\:off-3 {
     grid-column: span 3/span 3;
     display: block;
   }
-  .def\:off-4 {
+  .df\:off-4 {
     grid-column: span 4/span 4;
     display: block;
   }
-  .def\:off-5 {
+  .df\:off-5 {
     grid-column: span 5/span 5;
     display: block;
   }
-  .def\:off-6 {
+  .df\:off-6 {
     grid-column: span 6/span 6;
     display: block;
   }
-  .def\:off-7 {
+  .df\:off-7 {
     grid-column: span 7/span 7;
     display: block;
   }
-  .def\:off-8 {
+  .df\:off-8 {
     grid-column: span 8/span 8;
     display: block;
   }
-  .def\:off-9 {
+  .df\:off-9 {
     grid-column: span 9/span 9;
     display: block;
   }
-  .def\:off-10 {
+  .df\:off-10 {
     grid-column: span 10/span 10;
     display: block;
   }
-  .def\:off-11 {
+  .df\:off-11 {
     grid-column: span 11/span 11;
     display: block;
   }
-  .def\:off-12 {
+  .df\:off-12 {
     grid-column: span 12/span 12;
     display: block;
   }
-  .def-off-0 {
+  .df-off-0 {
     display: none;
   }
-  .def\:1-1 {
+  .df\:1-1 {
     grid-column: 1/2;
     display: block;
   }
-  .def\:1-2 {
+  .df\:1-2 {
     grid-column: 1/3;
     display: block;
   }
-  .def\:1-3 {
+  .df\:1-3 {
     grid-column: 1/4;
     display: block;
   }
-  .def\:1-4 {
+  .df\:1-4 {
     grid-column: 1/5;
     display: block;
   }
-  .def\:1-5 {
+  .df\:1-5 {
     grid-column: 1/6;
     display: block;
   }
-  .def\:1-6 {
+  .df\:1-6 {
     grid-column: 1/7;
     display: block;
   }
-  .def\:1-7 {
+  .df\:1-7 {
     grid-column: 1/8;
     display: block;
   }
-  .def\:1-8 {
+  .df\:1-8 {
     grid-column: 1/9;
     display: block;
   }
-  .def\:1-9 {
+  .df\:1-9 {
     grid-column: 1/10;
     display: block;
   }
-  .def\:1-10 {
+  .df\:1-10 {
     grid-column: 1/11;
     display: block;
   }
-  .def\:1-11 {
+  .df\:1-11 {
     grid-column: 1/12;
     display: block;
   }
-  .def\:1-12 {
+  .df\:1-12 {
     grid-column: 1/13;
     display: block;
   }
-  .def\:2-2 {
+  .df\:2-2 {
     grid-column: 2/3;
     display: block;
   }
-  .def\:2-3 {
+  .df\:2-3 {
     grid-column: 2/4;
     display: block;
   }
-  .def\:2-4 {
+  .df\:2-4 {
     grid-column: 2/5;
     display: block;
   }
-  .def\:2-5 {
+  .df\:2-5 {
     grid-column: 2/6;
     display: block;
   }
-  .def\:2-6 {
+  .df\:2-6 {
     grid-column: 2/7;
     display: block;
   }
-  .def\:2-7 {
+  .df\:2-7 {
     grid-column: 2/8;
     display: block;
   }
-  .def\:2-8 {
+  .df\:2-8 {
     grid-column: 2/9;
     display: block;
   }
-  .def\:2-9 {
+  .df\:2-9 {
     grid-column: 2/10;
     display: block;
   }
-  .def\:2-10 {
+  .df\:2-10 {
     grid-column: 2/11;
     display: block;
   }
-  .def\:2-11 {
+  .df\:2-11 {
     grid-column: 2/12;
     display: block;
   }
-  .def\:2-12 {
+  .df\:2-12 {
     grid-column: 2/13;
     display: block;
   }
-  .def\:3-3 {
+  .df\:3-3 {
     grid-column: 3/4;
     display: block;
   }
-  .def\:3-4 {
+  .df\:3-4 {
     grid-column: 3/5;
     display: block;
   }
-  .def\:3-5 {
+  .df\:3-5 {
     grid-column: 3/6;
     display: block;
   }
-  .def\:3-6 {
+  .df\:3-6 {
     grid-column: 3/7;
     display: block;
   }
-  .def\:3-7 {
+  .df\:3-7 {
     grid-column: 3/8;
     display: block;
   }
-  .def\:3-8 {
+  .df\:3-8 {
     grid-column: 3/9;
     display: block;
   }
-  .def\:3-9 {
+  .df\:3-9 {
     grid-column: 3/10;
     display: block;
   }
-  .def\:3-10 {
+  .df\:3-10 {
     grid-column: 3/11;
     display: block;
   }
-  .def\:3-11 {
+  .df\:3-11 {
     grid-column: 3/12;
     display: block;
   }
-  .def\:3-12 {
+  .df\:3-12 {
     grid-column: 3/13;
     display: block;
   }
-  .def\:4-4 {
+  .df\:4-4 {
     grid-column: 4/5;
     display: block;
   }
-  .def\:4-5 {
+  .df\:4-5 {
     grid-column: 4/6;
     display: block;
   }
-  .def\:4-6 {
+  .df\:4-6 {
     grid-column: 4/7;
     display: block;
   }
-  .def\:4-7 {
+  .df\:4-7 {
     grid-column: 4/8;
     display: block;
   }
-  .def\:4-8 {
+  .df\:4-8 {
     grid-column: 4/9;
     display: block;
   }
-  .def\:4-9 {
+  .df\:4-9 {
     grid-column: 4/10;
     display: block;
   }
-  .def\:4-10 {
+  .df\:4-10 {
     grid-column: 4/11;
     display: block;
   }
-  .def\:4-11 {
+  .df\:4-11 {
     grid-column: 4/12;
     display: block;
   }
-  .def\:4-12 {
+  .df\:4-12 {
     grid-column: 4/13;
     display: block;
   }
-  .def\:5-5 {
+  .df\:5-5 {
     grid-column: 5/6;
     display: block;
   }
-  .def\:5-6 {
+  .df\:5-6 {
     grid-column: 5/7;
     display: block;
   }
-  .def\:5-7 {
+  .df\:5-7 {
     grid-column: 5/8;
     display: block;
   }
-  .def\:5-8 {
+  .df\:5-8 {
     grid-column: 5/9;
     display: block;
   }
-  .def\:5-9 {
+  .df\:5-9 {
     grid-column: 5/10;
     display: block;
   }
-  .def\:5-10 {
+  .df\:5-10 {
     grid-column: 5/11;
     display: block;
   }
-  .def\:5-11 {
+  .df\:5-11 {
     grid-column: 5/12;
     display: block;
   }
-  .def\:5-12 {
+  .df\:5-12 {
     grid-column: 5/13;
     display: block;
   }
-  .def\:6-6 {
+  .df\:6-6 {
     grid-column: 6/7;
     display: block;
   }
-  .def\:6-7 {
+  .df\:6-7 {
     grid-column: 6/8;
     display: block;
   }
-  .def\:6-8 {
+  .df\:6-8 {
     grid-column: 6/9;
     display: block;
   }
-  .def\:6-9 {
+  .df\:6-9 {
     grid-column: 6/10;
     display: block;
   }
-  .def\:6-10 {
+  .df\:6-10 {
     grid-column: 6/11;
     display: block;
   }
-  .def\:6-11 {
+  .df\:6-11 {
     grid-column: 6/12;
     display: block;
   }
-  .def\:6-12 {
+  .df\:6-12 {
     grid-column: 6/13;
     display: block;
   }
-  .def\:7-7 {
+  .df\:7-7 {
     grid-column: 7/8;
     display: block;
   }
-  .def\:7-8 {
+  .df\:7-8 {
     grid-column: 7/9;
     display: block;
   }
-  .def\:7-9 {
+  .df\:7-9 {
     grid-column: 7/10;
     display: block;
   }
-  .def\:7-10 {
+  .df\:7-10 {
     grid-column: 7/11;
     display: block;
   }
-  .def\:7-11 {
+  .df\:7-11 {
     grid-column: 7/12;
     display: block;
   }
-  .def\:7-12 {
+  .df\:7-12 {
     grid-column: 7/13;
     display: block;
   }
-  .def\:8-8 {
+  .df\:8-8 {
     grid-column: 8/9;
     display: block;
   }
-  .def\:8-9 {
+  .df\:8-9 {
     grid-column: 8/10;
     display: block;
   }
-  .def\:8-10 {
+  .df\:8-10 {
     grid-column: 8/11;
     display: block;
   }
-  .def\:8-11 {
+  .df\:8-11 {
     grid-column: 8/12;
     display: block;
   }
-  .def\:8-12 {
+  .df\:8-12 {
     grid-column: 8/13;
     display: block;
   }
-  .def\:9-9 {
+  .df\:9-9 {
     grid-column: 9/10;
     display: block;
   }
-  .def\:9-10 {
+  .df\:9-10 {
     grid-column: 9/11;
     display: block;
   }
-  .def\:9-11 {
+  .df\:9-11 {
     grid-column: 9/12;
     display: block;
   }
-  .def\:9-12 {
+  .df\:9-12 {
     grid-column: 9/13;
     display: block;
   }
-  .def\:10-10 {
+  .df\:10-10 {
     grid-column: 10/11;
     display: block;
   }
-  .def\:10-11 {
+  .df\:10-11 {
     grid-column: 10/12;
     display: block;
   }
-  .def\:10-12 {
+  .df\:10-12 {
     grid-column: 10/13;
     display: block;
   }
-  .def\:11-11 {
+  .df\:11-11 {
     grid-column: 11/12;
     display: block;
   }
-  .def\:11-12 {
+  .df\:11-12 {
     grid-column: 11/13;
     display: block;
   }
-  .def\:12-12 {
+  .df\:12-12 {
     grid-column: 12/13;
     display: block;
   }
-  .def\:start-1 {
+  .df\:start-1 {
     grid-column-start: 1;
   }
-  .def\:start-2 {
+  .df\:start-2 {
     grid-column-start: 2;
   }
-  .def\:start-3 {
+  .df\:start-3 {
     grid-column-start: 3;
   }
-  .def\:start-4 {
+  .df\:start-4 {
     grid-column-start: 4;
   }
-  .def\:start-5 {
+  .df\:start-5 {
     grid-column-start: 5;
   }
-  .def\:start-6 {
+  .df\:start-6 {
     grid-column-start: 6;
   }
-  .def\:start-7 {
+  .df\:start-7 {
     grid-column-start: 7;
   }
-  .def\:start-8 {
+  .df\:start-8 {
     grid-column-start: 8;
   }
-  .def\:start-9 {
+  .df\:start-9 {
     grid-column-start: 9;
   }
-  .def\:start-10 {
+  .df\:start-10 {
     grid-column-start: 10;
   }
-  .def\:start-11 {
+  .df\:start-11 {
     grid-column-start: 11;
   }
-  .def\:start-12 {
+  .df\:start-12 {
     grid-column-start: 12;
   }
 }
@@ -4355,7 +4355,7 @@ body {
 
 
 // ------------------------------------------------------------------
-// Inherit the subgrid more than once
+// Inherit the subgrid more than once I
 // ------------------------------------------------------------------
 
 <section class="section">
@@ -4369,95 +4369,76 @@ body {
   </div>
 </section>
 
+// ------------------------------------------------------------------
+// Inherit the subgrid more than once II
+// ------------------------------------------------------------------
+
+<section class="section">
+  <div class="container">
+    <div class="col subgrid df:1-6 / md:3-10 / lg:6-11">
+      <div class="col subgrid df:1-3 / md:4-7 / lg:2-3">
+        <div class="col subgrid df:2-3">
+          <div class="col df:1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 */
-.subgrid {
-  grid-column: 1/-1;
-}
 @media (min-width: 0px) {
   .subgrid {
     display: grid !important;
     gap: inherit !important;
     grid-template-columns: subgrid;
-    grid-column: 1/-1;
-    background: red;
   }
 }
 
-.sm\:subgrid {
-  grid-column: 1/-1;
-}
 @media (min-width: 768px) {
   .sm\:subgrid {
     display: grid !important;
     gap: inherit !important;
     grid-template-columns: subgrid;
-    grid-column: 1/-1;
-    background: red;
   }
 }
 
-.md\:subgrid {
-  grid-column: 1/-1;
-}
 @media (min-width: 1024px) {
   .md\:subgrid {
     display: grid !important;
     gap: inherit !important;
     grid-template-columns: subgrid;
-    grid-column: 1/-1;
-    background: red;
   }
 }
 
-.lg\:subgrid {
-  grid-column: 1/-1;
-}
 @media (min-width: 1280px) {
   .lg\:subgrid {
     display: grid !important;
     gap: inherit !important;
     grid-template-columns: subgrid;
-    grid-column: 1/-1;
-    background: red;
   }
 }
 
-.xl\:subgrid {
-  grid-column: 1/-1;
-}
 @media (min-width: 1536px) {
   .xl\:subgrid {
     display: grid !important;
     gap: inherit !important;
     grid-template-columns: subgrid;
-    grid-column: 1/-1;
-    background: red;
   }
 }
 
-.xxl\:subgrid {
-  grid-column: 1/-1;
-}
 @media (min-width: 1800px) {
   .xxl\:subgrid {
     display: grid !important;
     gap: inherit !important;
     grid-template-columns: subgrid;
-    grid-column: 1/-1;
-    background: red;
   }
 }
 
-.xxl\:subgrid {
-  grid-column: 1/-1;
-}
 @media (min-width: 1800px) {
   .xxl\:subgrid {
     display: grid !important;
     gap: inherit !important;
     grid-template-columns: subgrid;
-    grid-column: 1/-1;
-    background: red;
   }
 }
 
@@ -4783,19 +4764,62 @@ body {
   margin-bottom: var(--space-4xl);
 }
 
+body.demo {
+  background: black;
+}
 body.demo .section {
-  border: 1px solid rgba(255, 0, 0, 0.5);
+  position: relative;
+  background: rgba(96, 96, 96, 0.125);
+  outline: 1px dashed rgba(255, 255, 255, 0.25);
+}
+body.demo .section::before {
+  content: "section";
+  position: absolute;
+  inset: 8px auto auto 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.5;
 }
 body.demo .container {
-  border: 1px solid rgba(0, 255, 0, 0.25);
+  position: relative;
+  background: rgba(96, 96, 96, 0.125);
+  outline: 1px dashed rgba(255, 255, 255, 0.25);
+}
+body.demo .container::before {
+  content: "container";
+  position: absolute;
+  inset: 8px auto auto 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.5;
 }
 body.demo .col {
-  background: rgba(0, 255, 0, 0.125);
-  padding: var(--space-3xs);
+  position: relative;
+  background: rgba(96, 96, 96, 0.33);
+  outline: 1px dashed rgb(255, 255, 255);
+  min-height: var(--space-l);
 }
-body.demo .col[data-offset] {
-  background: rgba(255, 0, 0, 0.125);
+body.demo .col::before {
+  content: "col";
+  position: absolute;
+  inset: 8px auto auto 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+body.demo [class*=off-] {
+  position: relative;
+  outline: 1px dashed rgba(94, 94, 94, 0.125);
+  background: repeating-linear-gradient(-55deg, #222, #222 5px, #000 5px, #000 10px);
   height: 100%;
+}
+body.demo [class*=off-]::before {
+  content: "off";
+  position: absolute;
+  inset: 8px auto auto 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.5;
 }
 
 body.type-demo .col {

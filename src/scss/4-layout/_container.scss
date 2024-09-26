@@ -46,7 +46,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container --align-right">
+  <div class="container --right">
     <div class="col">…</div>
   </div>
 </section>
@@ -56,7 +56,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container --align-left">
+  <div class="container --left">
     <div class="col">…</div>
   </div>
 </section>
@@ -82,16 +82,15 @@
   margin-right: var(--default-page-padding);
 
   &.--auto {
-    // equal columns
     grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: column;
   }
 
-  &.--align-right {
+  &.--right {
     margin-right: 0;
   }
 
-  &.--align-left {
+  &.--left {
     margin-left: 0;
   }
 

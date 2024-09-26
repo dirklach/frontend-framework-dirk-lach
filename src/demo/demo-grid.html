@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initiascale=1.0" />
+    <title>FriendlyCSS</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body class="demo">
+    <a href="index.html">FriendlyCSS</a>
+
+    <section class="section">
+      <div class="container --small">
+        <div class="col df:subgrid lg:4-7">
+          <div class="col lg:3-4"></div>
+        </div>
+        <div class="col df:subgrid lg:9-11">
+          <div class="col lg:2-2"></div>
+        </div>
+        <div class="col md:off-1"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="col subgrid df:1-6 / md:3-10 / lg:6-11">
+          <div class="col subgrid df:1-3 / md:4-7 / lg:2-3">
+            <div class="col subgrid df:2-3">
+              <div class="col df:1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
