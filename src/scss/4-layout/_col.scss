@@ -66,7 +66,6 @@
 </section>
 
 */
-
 .col {
   grid-column: span 12;
 }
@@ -91,14 +90,14 @@
       }
     }
 
-    .#{$prefix}-off-0 {
+    // Specifically handle the 0 offset case
+    .#{$prefix}\:off-0 {
       display: none;
     }
 
     // Handle start-end columns for area spans
     @for $start from 1 through 12 {
       @for $end from ($start + 1) through 13 {
-        // If the end column is 12, we set it to 13 to include the entire width
         $end-grid-value: if($end == 13, 13, $end);
 
         .#{$prefix}\:#{$start}-#{$end - 1} {
@@ -107,12 +106,22 @@
         }
       }
     }
+
     // Handle starting column only
     @for $start from 1 through 12 {
       .#{$prefix}\:start-#{$start} {
         grid-column-start: #{$start};
       }
     }
+  }
+}
+
+// ==================================================================
+// Default display: none for all offset classes
+// ==================================================================
+@for $i from 0 through 12 {
+  [class*="off-#{$i}"] {
+    display: none;
   }
 }
 
