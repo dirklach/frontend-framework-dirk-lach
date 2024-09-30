@@ -86,19 +86,19 @@
 }
 
 .sm\:subgrid {
-  @include bp(sm) {
+  @include bp(s) {
     @include subgrid;
   }
 }
 
 .md\:subgrid {
-  @include bp(md) {
+  @include bp(m) {
     @include subgrid;
   }
 }
 
 .lg\:subgrid {
-  @include bp(lg) {
+  @include bp(l) {
     @include subgrid;
   }
 }

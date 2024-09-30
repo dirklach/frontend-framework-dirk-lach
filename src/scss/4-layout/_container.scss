@@ -98,17 +98,17 @@
     margin-left: var(--big-page-padding);
     margin-right: var(--big-page-padding);
 
-    @include bp(sm) {
+    @include bp(s) {
       margin-left: var(--sm-big-page-padding);
       margin-right: var(--sm-big-page-padding);
     }
 
-    @include bp(md) {
+    @include bp(m) {
       margin-left: var(--md-big-page-padding);
       margin-right: var(--md-big-page-padding);
     }
 
-    @include bp(lg) {
+    @include bp(l) {
       margin-left: var(--lg-big-page-padding);
       margin-right: var(--lg-big-page-padding);
     }

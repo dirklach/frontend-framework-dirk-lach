@@ -27,28 +27,32 @@ $spacings: (
 );
 
 // ==================================================================
-// Utilities / Margin / Classes
+// Mixin for margin utilities
 // ==================================================================
 
-.mt-0 {
-  margin-top: 0;
+@mixin generate-margins($prefix, $min-width) {
+  @media (min-width: $min-width) {
+    @each $name, $value in $spacings {
+      .#{$prefix}\:mt-#{$name} {
+        margin-top: $value;
+      }
+
+      .#{$prefix}\:mb-#{$name} {
+        margin-bottom: $value;
+      }
+
+      .#{$prefix}\:my-#{$name} {
+        margin-top: $value;
+        margin-bottom: $value;
+      }
+    }
+  }
 }
 
-.mb-0 {
-  margin-bottom: 0;
-}
+// ==================================================================
+// Loop through breakpoints map to generate margin classes
+// ==================================================================
 
-@each $name, $value in $spacings {
-  .mt-#{$name} {
-    margin-top: $value;
-  }
-
-  .mb-#{$name} {
-    margin-bottom: $value;
-  }
-
-  .my-#{$name} {
-    margin-top: $value;
-    margin-bottom: $value;
-  }
+@each $prefix, $min-width in $breakpoints {
+  @include generate-margins($prefix, $min-width);
 }
