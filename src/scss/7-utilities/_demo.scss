@@ -13,7 +13,7 @@ body.demo {
     background: rgba(96, 96, 96, 0.125);
     outline: 1px dashed rgba(255, 255, 255, 0.25);
     &::before {
-      content: "section";
+      content: "S";
       position: absolute;
       inset: 8px auto auto 8px;
       font-size: 11px;
@@ -21,12 +21,12 @@ body.demo {
       opacity: 0.5;
     }
   }
-  .container {
+  .grid {
     position: relative;
     background: rgba(96, 96, 96, 0.125);
     outline: 1px dashed rgba(255, 255, 255, 0.25);
     &::before {
-      content: "container";
+      content: "G";
       position: absolute;
       inset: 8px auto auto 8px;
       font-size: 11px;
@@ -37,10 +37,10 @@ body.demo {
   .col {
     position: relative;
     background: rgba(96, 96, 96, 0.33);
-    outline: 1px dashed rgba(255, 255, 255, 1);
-    min-height: var(--space-l);
+    outline: 1px dashed rgba(255, 255, 255, 0.5);
+    min-height: var(--space-lg);
     &::before {
-      content: "col";
+      content: "C";
       position: absolute;
       inset: 8px auto auto 8px;
       font-size: 11px;
@@ -48,32 +48,36 @@ body.demo {
       opacity: 0.5;
     }
   }
-  [class*="off-"] {
-    position: relative;
-    outline: 1px dashed rgba(94, 94, 94, 0.125);
-    background: repeating-linear-gradient(
-      -55deg,
-      #222,
-      #222 5px,
-      #000 5px,
-      #000 10px
-    );
-    height: 100%;
-    &::before {
-      content: "off";
-      position: absolute;
-      inset: 8px auto auto 8px;
-      font-size: 11px;
-      text-transform: uppercase;
-      opacity: 0.5;
-    }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--space-2xs);
   }
 }
 
-body.type-demo {
-  .col {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-s);
+
+.demo-grid {
+  position: absolute!important;
+  inset: 0 0 0 0!important;
+  display: none;
+
+  &.--show {
+    display: grid!important;
+  }
+}
+
+.demo-grid .col {
+  height: 100vh;
+  background: rgba(255, 0, 0, 0.15)!important;
+  outline: 0!important;
+}
+
+.demo-grid .col,
+.demo-grid .grid,
+.demo-grid.section {
+  pointer-events: none!important;
+  &::before {
+    content: ""!important;
   }
 }

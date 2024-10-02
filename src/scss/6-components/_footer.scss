@@ -8,7 +8,7 @@
 .c-footer {
   background: red;
 
-  @include bp(m) {
+  @include bp(md) {
     background: green;
   }
 

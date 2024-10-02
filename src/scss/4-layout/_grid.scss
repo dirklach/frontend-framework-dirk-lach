@@ -16,7 +16,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container">
+  <div class="grid">
     <div class="col">…</div>
   </div>
 </section>
@@ -26,7 +26,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container --small">
+  <div class="grid --small">
     <div class="col">…</div>
   </div>
 </section>
@@ -36,7 +36,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container --full">
+  <div class="grid --full">
     <div class="col">…</div>
   </div>
 </section>
@@ -46,7 +46,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container --right">
+  <div class="grid --right">
     <div class="col">…</div>
   </div>
 </section>
@@ -56,7 +56,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container --left">
+  <div class="grid --left">
     <div class="col">…</div>
   </div>
 </section>
@@ -66,14 +66,14 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container --auto">
+  <div class="grid --auto">
     <div class="col">…</div>
   </div>
 </section>
 
 */
 
-.container {
+.grid {
   display: grid;
   column-gap: var(--default-column-gap);
   row-gap: var(--default-row-gap);
@@ -98,17 +98,17 @@
     margin-left: var(--big-page-padding);
     margin-right: var(--big-page-padding);
 
-    @include bp(s) {
+    @include bp(sm) {
       margin-left: var(--sm-big-page-padding);
       margin-right: var(--sm-big-page-padding);
     }
 
-    @include bp(m) {
+    @include bp(md) {
       margin-left: var(--md-big-page-padding);
       margin-right: var(--md-big-page-padding);
     }
 
-    @include bp(l) {
+    @include bp(lg) {
       margin-left: var(--lg-big-page-padding);
       margin-right: var(--lg-big-page-padding);
     }

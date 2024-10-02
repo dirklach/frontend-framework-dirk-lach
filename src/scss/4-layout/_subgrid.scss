@@ -16,7 +16,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container">
+  <div class="grid">
     <div class="c-my-component | subgrid">
       <div class="col md:4">…</div>
       <div class="col md:4">…</div>
@@ -30,7 +30,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container">
+  <div class="grid">
     <div class="c-my-component | md:subgrid">
       <div class="col md:4">…</div>
       <div class="col md:4">…</div>
@@ -45,7 +45,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container">
+  <div class="grid">
     <div class="c-my-component | md:subgrid">
       <div class="col md:6 md:subgrid / lg:8">
         <div class="col md:2-4 / lg:3-5">…</div>
@@ -60,7 +60,7 @@
 // ------------------------------------------------------------------
 
 <section class="section">
-  <div class="container">
+  <div class="grid">
     <div class="col subgrid df:1-6 / md:3-10 / lg:6-11">
       <div class="col subgrid df:1-3 / md:4-7 / lg:2-3">
         <div class="col subgrid df:2-3">
@@ -79,44 +79,44 @@
   grid-template-columns: subgrid;
 }
 
-.subgrid {
+[data-subgrid] {
   @include bp(df) {
     @include subgrid;
   }
 }
 
-.sm\:subgrid {
-  @include bp(s) {
+[data-subgrid="sm"] {
+  @include bp(sm) {
     @include subgrid;
   }
 }
 
-.md\:subgrid {
-  @include bp(m) {
+[data-subgrid="md"] {
+  @include bp(md) {
     @include subgrid;
   }
 }
 
-.lg\:subgrid {
-  @include bp(l) {
+[data-subgrid="lg"] {
+  @include bp(lg) {
     @include subgrid;
   }
 }
 
-.xl\:subgrid {
+[data-subgrid="xl"] {
   @include bp(xl) {
     @include subgrid;
   }
 }
 
-.xxl\:subgrid {
+[data-subgrid="xxl"] {
   @include bp(xxl) {
     @include subgrid;
   }
 }
 
-.xxl\:subgrid {
-  @include bp(xxl) {
+[data-subgrid="xxxl"] {
+  @include bp(xxxl) {
     @include subgrid;
   }
 }

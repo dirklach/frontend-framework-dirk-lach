@@ -2,69 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initiascale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FriendlyCSS</title>
     <link rel="stylesheet" href="main.css" />
   </head>
 
   <body class="demo">
-    <a href="index.html">FriendlyCSS</a>
+    <div class="header">
+      <a href="index.html">FriendlyCSS</a>
+      Demo
+    </div>
 
-    <section class="section">
-      <div class="container">
-        <div class="col"></div>
+    <section class="demo-grid | section">
+      <div class="grid">
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
+        <div class="col" data-grid="df:1"></div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="col | df:mb-xl m:mb-m l:mb-2xl"></div>
-        <div class="col m:4-12"></div>
-      </div>
+      <div class="grid">
+        <div class="col" data-subgrid data-grid="sm:6 md:5" data-offset="sm:2 md:2">
+          <div class="col" data-grid="md:3-4"></div>  
+        </div>
+        <div class="col" data-grid="md:8-9"></div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="col"></div>
-        <div class="col subgrid">
-          <div class="col m:1-2"></div>
-          <div class="col m:4-7"></div>
-          <div class="col m:9-12"></div>
-        </div>
-        <div class="col subgrid">
-          <div class="col m:1-2"></div>
-          <div class="col m:4-7"></div>
-          <div class="col m:9-12"></div>
-        </div>
-        <div class="col subgrid">
-          <div class="col m:1-2"></div>
-          <div class="col m:4-7"></div>
-          <div class="col m:9-12"></div>
-        </div>
+      <div class="grid">
+        <div class="col" data-grid="sm:6 md:6" data-offset="sm:2 md:1"></div>
+        <div class="col" data-grid="md:9-11"></div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="col"></div>
-        <div class="col m:4-12">
-          <h1 class="text-heading --h2">Item</h1>
-          <h1 class="text-heading --h2">Item</h1>
-          <h1 class="text-heading --h2">Item</h1>
-          <h1 class="text-heading --h2">Item</h1>
-          <h1 class="text-heading --h2">Item</h1>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="col subgrid">
-          <div class="col m:2-5"></div>
-          <div class="col m:8-9"></div>
-          <div class="col m:10-11"></div>
-        </div>
-      </div>
-    </section>
+    <script src="main.js"></script>
   </body>
 </html>

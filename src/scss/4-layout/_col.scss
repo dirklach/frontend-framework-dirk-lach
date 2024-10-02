@@ -2,114 +2,59 @@
 @use "../2-tools" as *;
 
 // ==================================================================
-// Layout / Col
+// Layout / Col (Refactored to use data-attributes)
 // ==================================================================
 
 /*
-
-// ==================================================================
-// Usage
-// ==================================================================
-
-// ------------------------------------------------------------------
-// Without column definition (always full width)
-// ------------------------------------------------------------------
+Usage
 
 <section class="section">
-  <div class="container">
-    <div class="col">…</div>
-  </div>
-</section>
-
-// ------------------------------------------------------------------
-// Span columns:
-// ------------------------------------------------------------------
-// - df, xs, sm: 12 columns (default)
-// - md: 6 columns
-// - lg, xl, xxl, xxxl: 4 columns
-// ------------------------------------------------------------------
-
-<section class="section">
-  <div class="container">
-    <div class="col md:6 / lg:4">…</div>
-  </div>
-</section>
-
-// ------------------------------------------------------------------
-// Offset & span columns:
-// ------------------------------------------------------------------
-// - df, xs, sm: 0 columns offset + 12 columns
-// - md: 2 columns offset + 6 columns 
-// - lg, xl, xxl, xxxl: 2 columns offset + 4 columns
-// ------------------------------------------------------------------
-
-<section class="section">
-  <div class="container">
-    <div class="col md:off-2">…</div>
-    <div class="col md:6 / lg:4">…</div>
-  </div>
-</section>
-
-
-// ------------------------------------------------------------------
-// Column area:
-// ------------------------------------------------------------------
-// - df, xs, sm: 12 columns (default)
-// - md: column 2-5
-// - lg, xl, xxl, xxxl: column 4-10
-// ------------------------------------------------------------------
-
-<section class="section">
-  <div class="container">
-    <div class="col md:2-5 / lg:4-10">…</div>
+  <div class="grid">
+    <div data-grid="md:6 lg:4">…</div>
+    <div data-offset="md:2" data-grid="md:6 lg:4">…</div>
   </div>
 </section>
 
 */
+
+// Default grid column span (full width)
 .col {
-  grid-column: span 12;
+  grid-column: span 12 / span 12;
 }
 
 // ==================================================================
-// Mixin for column and offset classes
+// Mixin for data-attribute based grid system
 // ==================================================================
-@mixin generate-grid($prefix, $min-width) {
+@mixin generate-grid-data($prefix, $min-width) {
   @media (min-width: $min-width) {
-    // Handle column spans
+    // Handle column spans (e.g. data-grid="md:6 lg:4")
     @for $i from 1 through 12 {
-      .#{$prefix}\:#{$i} {
+      [data-grid*="#{$prefix}\:#{$i}"] {
         grid-column: span #{$i} / span #{$i};
       }
     }
 
-    // Handle offsets
+    // Handle offsets (e.g. data-offset="md:2")
     @for $i from 0 through 12 {
-      .#{$prefix}\:off-#{$i} {
-        grid-column: span #{$i} / span #{$i};
-        display: block;
+      [data-offset*="#{$prefix}\:#{$i}"] {
+        grid-column-start: #{$i + 1};
       }
     }
 
-    // Specifically handle the 0 offset case
-    .#{$prefix}\:off-0 {
-      display: none;
-    }
-
-    // Handle start-end columns for area spans
+    // Handle grid area spans (e.g. data-grid="md:2-5 lg:4-10")
     @for $start from 1 through 12 {
       @for $end from ($start + 1) through 13 {
         $end-grid-value: if($end == 13, 13, $end);
 
-        .#{$prefix}\:#{$start}-#{$end - 1} {
+        [data-grid*="#{$prefix}\:#{$start}-#{$end - 1}"] {
           grid-column: #{$start} / #{$end-grid-value};
-          display: block;
         }
       }
     }
 
-    // Handle starting column only
+    // Handle grid start (e.g. data-grid="md:start-2")
     @for $start from 1 through 12 {
-      .#{$prefix}\:start-#{$start} {
+      [data-grid*="#{$prefix}\:start-#{$start}"] {
         grid-column-start: #{$start};
       }
     }
@@ -117,17 +62,8 @@
 }
 
 // ==================================================================
-// Default display: none for all offset classes
-// ==================================================================
-@for $i from 0 through 12 {
-  [class*="off-#{$i}"] {
-    display: none;
-  }
-}
-
-// ==================================================================
-// Loop through breakpoints map to generate grid and offset classes
+// Loop through breakpoints map to generate grid and offset attributes
 // ==================================================================
 @each $prefix, $min-width in $breakpoints {
-  @include generate-grid($prefix, $min-width);
+  @include generate-grid-data($prefix, $min-width);
 }
