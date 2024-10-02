@@ -156,7 +156,7 @@ that are available throughout the project.
   --default-column-gap: var(--space-2xs);
   --default-row-gap: var(--space-2xs);
   --default-columns: 12;
-  --default-margin-y: var(--space-l);
+  --default-margin-y: var(--space-md);
 }
 
 /* 
@@ -4661,15 +4661,20 @@ body.demo .header {
   display: flex;
   justify-content: space-between;
   margin: var(--space-2xs);
+  font-size: var(--size-3);
+}
+body.demo .header a {
+  text-decoration: none;
 }
 
 .demo-grid {
-  position: absolute !important;
+  position: fixed !important;
   inset: 0 0 0 0 !important;
   display: none;
 }
 .demo-grid.--show {
   display: grid !important;
+  inset: 0 0 0 0 !important;
 }
 
 .demo-grid .col {

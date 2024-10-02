@@ -53,17 +53,23 @@ body.demo {
     display: flex;
     justify-content: space-between;
     margin: var(--space-2xs);
+    font-size: var(--size-3);
+    a {
+      text-decoration: none;
+    }
   }
 }
 
 
 .demo-grid {
-  position: absolute!important;
+  position: fixed!important;
   inset: 0 0 0 0!important;
   display: none;
 
   &.--show {
     display: grid!important;
+    inset: 0 0 0 0!important;
+
   }
 }
 
