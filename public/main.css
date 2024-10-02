@@ -3651,7 +3651,6 @@ Usage
 
 .text-copy {
   font-size: var(--size-0);
-  color: #666;
 }
 .text-copy.--s {
   font-size: var(--size--1);
@@ -4617,6 +4616,9 @@ Usage
 body.demo {
   background: black;
 }
+body.demo [data-subgrid] {
+  outline: 1px solid white !important;
+}
 body.demo .section {
   position: relative;
   background: rgba(96, 96, 96, 0.125);
@@ -4657,20 +4659,47 @@ body.demo .col::before {
   text-transform: uppercase;
   opacity: 0.5;
 }
+body.demo .header__section,
+body.demo .header__grid,
+body.demo .header__col {
+  outline: 0;
+  background: transparent;
+  min-height: 0 !important;
+  margin-top: var(--space-2xs);
+}
+body.demo .header__section::before,
+body.demo .header__grid::before,
+body.demo .header__col::before {
+  display: none;
+}
 body.demo .header {
-  display: flex;
-  justify-content: space-between;
-  margin: var(--space-2xs);
-  font-size: var(--size-3);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--space-xl);
+  row-gap: var(--space-3xs);
+  font-size: var(--size-0);
 }
 body.demo .header a {
   text-decoration: none;
+}
+@media (min-width: 640px) {
+  body.demo .header {
+    font-size: var(--size-3);
+  }
+}
+@media (min-width: 1024px) {
+  body.demo .header {
+    display: flex;
+    justify-content: space-between;
+    column-gap: var(--space-2xs);
+  }
 }
 
 .demo-grid {
   position: fixed !important;
   inset: 0 0 0 0 !important;
   display: none;
+  margin: 0 !important;
 }
 .demo-grid.--show {
   display: grid !important;
@@ -4692,6 +4721,15 @@ body.demo .header a {
 .demo-grid .grid::before,
 .demo-grid.section::before {
   content: "" !important;
+}
+
+.demo-grid-toggle {
+  position: fixed;
+  inset: auto var(--space-sm) var(--space-sm) auto;
+  cursor: pointer;
+}
+.demo-grid-toggle:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=main.css.map */
