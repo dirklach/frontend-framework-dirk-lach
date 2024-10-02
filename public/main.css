@@ -4645,6 +4645,9 @@ body.demo .grid::before {
   text-transform: uppercase;
   opacity: 0.5;
 }
+body.demo .grid.--small {
+  opacity: 0.5;
+}
 body.demo .col {
   position: relative;
   background: rgba(96, 96, 96, 0.33);
