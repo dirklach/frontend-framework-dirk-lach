@@ -47,7 +47,7 @@ body.demo {
     position: relative;
     background: rgba(96, 96, 96, 0.33);
     outline: 1px dashed rgba(255, 255, 255, 0.5);
-    min-height: var(--space-lg);
+    min-height: var(--space-6);
     &::before {
       content: "C";
       position: absolute;
@@ -64,7 +64,7 @@ body.demo {
     outline: 0;
     background: transparent;
     min-height: 0!important;
-    margin-top: var(--space-2xs);
+    margin-top: var(--space-2);
 
     &::before {
       display: none;
@@ -74,8 +74,8 @@ body.demo {
   .header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: var(--space-xl);
-    row-gap: var(--space-3xs);
+    column-gap: var(--space-8);
+    row-gap: var(--space-1);
 
     font-size: var(--size-0);
 
@@ -90,7 +90,7 @@ body.demo {
     @include bp(md) {
       display: flex;
       justify-content: space-between;
-      column-gap: var(--space-2xs);
+      column-gap: var(--space-2);
     }
   }
 }
@@ -126,7 +126,7 @@ body.demo {
 
 .demo-grid-toggle {
   position: fixed;
-  inset: auto var(--space-sm) var(--space-sm) auto;
+  inset: auto var(--space-4) var(--space-4) auto;
   cursor: pointer;
 
   &:hover {

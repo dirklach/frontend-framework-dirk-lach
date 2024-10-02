@@ -69,16 +69,16 @@ that are available throughout the project.
   --color-secondary: #242424;
   /*  If you want to add more spacing values, add them here and also
       in the SCSS variables in 7-utilities/_margin.scss. */
-  --space-3xs: clamp(0.375rem, 0.2663rem + 0.5435vw, 0.6875rem);
-  --space-2xs: clamp(0.8125rem, 0.6386rem + 0.8696vw, 1.3125rem);
-  --space-xs: clamp(1.1875rem, 0.9049rem + 1.413vw, 2rem);
-  --space-sm: clamp(1.5625rem, 1.1929rem + 1.8478vw, 2.625rem);
-  --space-md: clamp(2.375rem, 1.8315rem + 2.7174vw, 3.9375rem);
-  --space-lg: clamp(3.125rem, 2.3859rem + 3.6957vw, 5.25rem);
-  --space-xl: clamp(5.5rem, 4.2174rem + 6.413vw, 9.1875rem);
-  --space-xxl: clamp(7.0625rem, 5.4103rem + 8.2609vw, 11.8125rem);
-  --space-xxxl: clamp(10.9375rem, 8.3505rem + 12.9348vw, 18.375rem);
-  --space-4xl: clamp(15.625rem, 11.9293rem + 18.4783vw, 26.25rem);
+  --space-1: clamp(0.375rem, 0.2663rem + 0.5435vw, 0.6875rem);
+  --space-2: clamp(0.8125rem, 0.6386rem + 0.8696vw, 1.3125rem);
+  --space-3: clamp(1.1875rem, 0.9049rem + 1.413vw, 2rem);
+  --space-4: clamp(1.5625rem, 1.1929rem + 1.8478vw, 2.625rem);
+  --space-5: clamp(2.375rem, 1.8315rem + 2.7174vw, 3.9375rem);
+  --space-6: clamp(3.125rem, 2.3859rem + 3.6957vw, 5.25rem);
+  --space-7: clamp(5.5rem, 4.2174rem + 6.413vw, 9.1875rem);
+  --space-8: clamp(7.0625rem, 5.4103rem + 8.2609vw, 11.8125rem);
+  --space-9: clamp(10.9375rem, 8.3505rem + 12.9348vw, 18.375rem);
+  --space-10: clamp(15.625rem, 11.9293rem + 18.4783vw, 26.25rem);
   --size--1: clamp(0.844rem, 1.0543rem + -0.2714vw, 1rem);
   --size-0: clamp(1.125rem, 1.225rem + 0vw, 1.25rem);
   --size-1: clamp(1.2656rem, 1.1842rem + 0.407vw, 1.4996rem);
@@ -87,13 +87,13 @@ that are available throughout the project.
   --size-4: clamp(1.802rem, 1.1933rem + 3.0434vw, 3.552rem);
   --size-5: clamp(2.0273rem, 1.0855rem + 4.7087vw, 4.7348rem);
   --size-6: clamp(2.2807rem, 0.8787rem + 7.0101vw, 8.0115rem);
-  --line-height-2xs: 0.75;
-  --line-height-xs: 0.9;
-  --line-height-s: 1.2;
-  --line-height-m: 1.5;
-  --line-height-l: 1.8;
-  --line-height-xl: 2.1;
-  --line-height-xxl: 2.4;
+  --line-height-1: 0.75;
+  --line-height-2: 0.9;
+  --line-height-3: 1.2;
+  --line-height-4: 1.5;
+  --line-height-5: 1.8;
+  --line-height-6: 2.1;
+  --line-height-7: 2.4;
   --weight-light: 300;
   --weight-normal: 400;
   --weight-medium: 500;
@@ -153,10 +153,10 @@ that are available throughout the project.
   --power4-ease-out: cubic-bezier(0.25, 0.5, 0.5, 1);
   --power4-ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
   --transition-alpha: var(--speed-fast) var(--power1-ease-out);
-  --default-column-gap: var(--space-2xs);
-  --default-row-gap: var(--space-2xs);
+  --default-column-gap: var(--space-2);
+  --default-row-gap: var(--space-2);
   --default-columns: 12;
-  --default-margin-y: var(--space-md);
+  --default-margin-y: var(--space-4);
 }
 
 /* 
@@ -3728,105 +3728,105 @@ Usage
     margin-top: 0;
     margin-bottom: 0;
   }
-  .df\:mt-3xs {
-    margin-top: var(--space-3xs);
+  .df\:mt-1 {
+    margin-top: var(--space-1);
   }
-  .df\:mb-3xs {
-    margin-bottom: var(--space-3xs);
+  .df\:mb-1 {
+    margin-bottom: var(--space-1);
   }
-  .df\:my-3xs {
-    margin-top: var(--space-3xs);
-    margin-bottom: var(--space-3xs);
+  .df\:my-1 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
   }
-  .df\:mt-2xs {
-    margin-top: var(--space-2xs);
+  .df\:mt-2 {
+    margin-top: var(--space-2);
   }
-  .df\:mb-2xs {
-    margin-bottom: var(--space-2xs);
+  .df\:mb-2 {
+    margin-bottom: var(--space-2);
   }
-  .df\:my-2xs {
-    margin-top: var(--space-2xs);
-    margin-bottom: var(--space-2xs);
+  .df\:my-2 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
   }
-  .df\:mt-xs {
-    margin-top: var(--space-xs);
+  .df\:mt-3 {
+    margin-top: var(--space-3);
   }
-  .df\:mb-xs {
-    margin-bottom: var(--space-xs);
+  .df\:mb-3 {
+    margin-bottom: var(--space-3);
   }
-  .df\:my-xs {
-    margin-top: var(--space-xs);
-    margin-bottom: var(--space-xs);
+  .df\:my-3 {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-3);
   }
-  .df\:mt-s {
-    margin-top: var(--space-s);
+  .df\:mt-4 {
+    margin-top: var(--space-4);
   }
-  .df\:mb-s {
-    margin-bottom: var(--space-s);
+  .df\:mb-4 {
+    margin-bottom: var(--space-4);
   }
-  .df\:my-s {
-    margin-top: var(--space-s);
-    margin-bottom: var(--space-s);
+  .df\:my-4 {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-4);
   }
-  .df\:mt-m {
-    margin-top: var(--space-m);
+  .df\:mt-5 {
+    margin-top: var(--space-5);
   }
-  .df\:mb-m {
-    margin-bottom: var(--space-m);
+  .df\:mb-5 {
+    margin-bottom: var(--space-5);
   }
-  .df\:my-m {
-    margin-top: var(--space-m);
-    margin-bottom: var(--space-m);
+  .df\:my-5 {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-5);
   }
-  .df\:mt-l {
-    margin-top: var(--space-l);
+  .df\:mt-6 {
+    margin-top: var(--space-6);
   }
-  .df\:mb-l {
-    margin-bottom: var(--space-l);
+  .df\:mb-6 {
+    margin-bottom: var(--space-6);
   }
-  .df\:my-l {
-    margin-top: var(--space-l);
-    margin-bottom: var(--space-l);
+  .df\:my-6 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
   }
-  .df\:mt-xl {
-    margin-top: var(--space-xl);
+  .df\:mt-7 {
+    margin-top: var(--space-7);
   }
-  .df\:mb-xl {
-    margin-bottom: var(--space-xl);
+  .df\:mb-7 {
+    margin-bottom: var(--space-7);
   }
-  .df\:my-xl {
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-xl);
+  .df\:my-7 {
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-7);
   }
-  .df\:mt-xxl {
-    margin-top: var(--space-xxl);
+  .df\:mt-8 {
+    margin-top: var(--space-8);
   }
-  .df\:mb-xxl {
-    margin-bottom: var(--space-xxl);
+  .df\:mb-8 {
+    margin-bottom: var(--space-8);
   }
-  .df\:my-xxl {
-    margin-top: var(--space-xxl);
-    margin-bottom: var(--space-xxl);
+  .df\:my-8 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-8);
   }
-  .df\:mt-xxxl {
-    margin-top: var(--space-xxxl);
+  .df\:mt-9 {
+    margin-top: var(--space-9);
   }
-  .df\:mb-xxxl {
-    margin-bottom: var(--space-xxxl);
+  .df\:mb-9 {
+    margin-bottom: var(--space-9);
   }
-  .df\:my-xxxl {
-    margin-top: var(--space-xxxl);
-    margin-bottom: var(--space-xxxl);
+  .df\:my-9 {
+    margin-top: var(--space-9);
+    margin-bottom: var(--space-9);
   }
-  .df\:mt-4xl {
-    margin-top: var(--space-4xl);
+  .df\:mt-10 {
+    margin-top: var(--space-10);
   }
-  .df\:mb-4xl {
-    margin-bottom: var(--space-4xl);
+  .df\:mb-10 {
+    margin-bottom: var(--space-10);
   }
-  .df\:my-4xl {
-    margin-top: var(--space-4xl);
-    margin-bottom: var(--space-4xl);
+  .df\:my-10 {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
   }
 }
 @media (min-width: 640px) {
@@ -3840,105 +3840,105 @@ Usage
     margin-top: 0;
     margin-bottom: 0;
   }
-  .xs\:mt-3xs {
-    margin-top: var(--space-3xs);
+  .xs\:mt-1 {
+    margin-top: var(--space-1);
   }
-  .xs\:mb-3xs {
-    margin-bottom: var(--space-3xs);
+  .xs\:mb-1 {
+    margin-bottom: var(--space-1);
   }
-  .xs\:my-3xs {
-    margin-top: var(--space-3xs);
-    margin-bottom: var(--space-3xs);
+  .xs\:my-1 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
   }
-  .xs\:mt-2xs {
-    margin-top: var(--space-2xs);
+  .xs\:mt-2 {
+    margin-top: var(--space-2);
   }
-  .xs\:mb-2xs {
-    margin-bottom: var(--space-2xs);
+  .xs\:mb-2 {
+    margin-bottom: var(--space-2);
   }
-  .xs\:my-2xs {
-    margin-top: var(--space-2xs);
-    margin-bottom: var(--space-2xs);
+  .xs\:my-2 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
   }
-  .xs\:mt-xs {
-    margin-top: var(--space-xs);
+  .xs\:mt-3 {
+    margin-top: var(--space-3);
   }
-  .xs\:mb-xs {
-    margin-bottom: var(--space-xs);
+  .xs\:mb-3 {
+    margin-bottom: var(--space-3);
   }
-  .xs\:my-xs {
-    margin-top: var(--space-xs);
-    margin-bottom: var(--space-xs);
+  .xs\:my-3 {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-3);
   }
-  .xs\:mt-s {
-    margin-top: var(--space-s);
+  .xs\:mt-4 {
+    margin-top: var(--space-4);
   }
-  .xs\:mb-s {
-    margin-bottom: var(--space-s);
+  .xs\:mb-4 {
+    margin-bottom: var(--space-4);
   }
-  .xs\:my-s {
-    margin-top: var(--space-s);
-    margin-bottom: var(--space-s);
+  .xs\:my-4 {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-4);
   }
-  .xs\:mt-m {
-    margin-top: var(--space-m);
+  .xs\:mt-5 {
+    margin-top: var(--space-5);
   }
-  .xs\:mb-m {
-    margin-bottom: var(--space-m);
+  .xs\:mb-5 {
+    margin-bottom: var(--space-5);
   }
-  .xs\:my-m {
-    margin-top: var(--space-m);
-    margin-bottom: var(--space-m);
+  .xs\:my-5 {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-5);
   }
-  .xs\:mt-l {
-    margin-top: var(--space-l);
+  .xs\:mt-6 {
+    margin-top: var(--space-6);
   }
-  .xs\:mb-l {
-    margin-bottom: var(--space-l);
+  .xs\:mb-6 {
+    margin-bottom: var(--space-6);
   }
-  .xs\:my-l {
-    margin-top: var(--space-l);
-    margin-bottom: var(--space-l);
+  .xs\:my-6 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
   }
-  .xs\:mt-xl {
-    margin-top: var(--space-xl);
+  .xs\:mt-7 {
+    margin-top: var(--space-7);
   }
-  .xs\:mb-xl {
-    margin-bottom: var(--space-xl);
+  .xs\:mb-7 {
+    margin-bottom: var(--space-7);
   }
-  .xs\:my-xl {
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-xl);
+  .xs\:my-7 {
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-7);
   }
-  .xs\:mt-xxl {
-    margin-top: var(--space-xxl);
+  .xs\:mt-8 {
+    margin-top: var(--space-8);
   }
-  .xs\:mb-xxl {
-    margin-bottom: var(--space-xxl);
+  .xs\:mb-8 {
+    margin-bottom: var(--space-8);
   }
-  .xs\:my-xxl {
-    margin-top: var(--space-xxl);
-    margin-bottom: var(--space-xxl);
+  .xs\:my-8 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-8);
   }
-  .xs\:mt-xxxl {
-    margin-top: var(--space-xxxl);
+  .xs\:mt-9 {
+    margin-top: var(--space-9);
   }
-  .xs\:mb-xxxl {
-    margin-bottom: var(--space-xxxl);
+  .xs\:mb-9 {
+    margin-bottom: var(--space-9);
   }
-  .xs\:my-xxxl {
-    margin-top: var(--space-xxxl);
-    margin-bottom: var(--space-xxxl);
+  .xs\:my-9 {
+    margin-top: var(--space-9);
+    margin-bottom: var(--space-9);
   }
-  .xs\:mt-4xl {
-    margin-top: var(--space-4xl);
+  .xs\:mt-10 {
+    margin-top: var(--space-10);
   }
-  .xs\:mb-4xl {
-    margin-bottom: var(--space-4xl);
+  .xs\:mb-10 {
+    margin-bottom: var(--space-10);
   }
-  .xs\:my-4xl {
-    margin-top: var(--space-4xl);
-    margin-bottom: var(--space-4xl);
+  .xs\:my-10 {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
   }
 }
 @media (min-width: 768px) {
@@ -3952,105 +3952,105 @@ Usage
     margin-top: 0;
     margin-bottom: 0;
   }
-  .sm\:mt-3xs {
-    margin-top: var(--space-3xs);
+  .sm\:mt-1 {
+    margin-top: var(--space-1);
   }
-  .sm\:mb-3xs {
-    margin-bottom: var(--space-3xs);
+  .sm\:mb-1 {
+    margin-bottom: var(--space-1);
   }
-  .sm\:my-3xs {
-    margin-top: var(--space-3xs);
-    margin-bottom: var(--space-3xs);
+  .sm\:my-1 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
   }
-  .sm\:mt-2xs {
-    margin-top: var(--space-2xs);
+  .sm\:mt-2 {
+    margin-top: var(--space-2);
   }
-  .sm\:mb-2xs {
-    margin-bottom: var(--space-2xs);
+  .sm\:mb-2 {
+    margin-bottom: var(--space-2);
   }
-  .sm\:my-2xs {
-    margin-top: var(--space-2xs);
-    margin-bottom: var(--space-2xs);
+  .sm\:my-2 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
   }
-  .sm\:mt-xs {
-    margin-top: var(--space-xs);
+  .sm\:mt-3 {
+    margin-top: var(--space-3);
   }
-  .sm\:mb-xs {
-    margin-bottom: var(--space-xs);
+  .sm\:mb-3 {
+    margin-bottom: var(--space-3);
   }
-  .sm\:my-xs {
-    margin-top: var(--space-xs);
-    margin-bottom: var(--space-xs);
+  .sm\:my-3 {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-3);
   }
-  .sm\:mt-s {
-    margin-top: var(--space-s);
+  .sm\:mt-4 {
+    margin-top: var(--space-4);
   }
-  .sm\:mb-s {
-    margin-bottom: var(--space-s);
+  .sm\:mb-4 {
+    margin-bottom: var(--space-4);
   }
-  .sm\:my-s {
-    margin-top: var(--space-s);
-    margin-bottom: var(--space-s);
+  .sm\:my-4 {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-4);
   }
-  .sm\:mt-m {
-    margin-top: var(--space-m);
+  .sm\:mt-5 {
+    margin-top: var(--space-5);
   }
-  .sm\:mb-m {
-    margin-bottom: var(--space-m);
+  .sm\:mb-5 {
+    margin-bottom: var(--space-5);
   }
-  .sm\:my-m {
-    margin-top: var(--space-m);
-    margin-bottom: var(--space-m);
+  .sm\:my-5 {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-5);
   }
-  .sm\:mt-l {
-    margin-top: var(--space-l);
+  .sm\:mt-6 {
+    margin-top: var(--space-6);
   }
-  .sm\:mb-l {
-    margin-bottom: var(--space-l);
+  .sm\:mb-6 {
+    margin-bottom: var(--space-6);
   }
-  .sm\:my-l {
-    margin-top: var(--space-l);
-    margin-bottom: var(--space-l);
+  .sm\:my-6 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
   }
-  .sm\:mt-xl {
-    margin-top: var(--space-xl);
+  .sm\:mt-7 {
+    margin-top: var(--space-7);
   }
-  .sm\:mb-xl {
-    margin-bottom: var(--space-xl);
+  .sm\:mb-7 {
+    margin-bottom: var(--space-7);
   }
-  .sm\:my-xl {
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-xl);
+  .sm\:my-7 {
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-7);
   }
-  .sm\:mt-xxl {
-    margin-top: var(--space-xxl);
+  .sm\:mt-8 {
+    margin-top: var(--space-8);
   }
-  .sm\:mb-xxl {
-    margin-bottom: var(--space-xxl);
+  .sm\:mb-8 {
+    margin-bottom: var(--space-8);
   }
-  .sm\:my-xxl {
-    margin-top: var(--space-xxl);
-    margin-bottom: var(--space-xxl);
+  .sm\:my-8 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-8);
   }
-  .sm\:mt-xxxl {
-    margin-top: var(--space-xxxl);
+  .sm\:mt-9 {
+    margin-top: var(--space-9);
   }
-  .sm\:mb-xxxl {
-    margin-bottom: var(--space-xxxl);
+  .sm\:mb-9 {
+    margin-bottom: var(--space-9);
   }
-  .sm\:my-xxxl {
-    margin-top: var(--space-xxxl);
-    margin-bottom: var(--space-xxxl);
+  .sm\:my-9 {
+    margin-top: var(--space-9);
+    margin-bottom: var(--space-9);
   }
-  .sm\:mt-4xl {
-    margin-top: var(--space-4xl);
+  .sm\:mt-10 {
+    margin-top: var(--space-10);
   }
-  .sm\:mb-4xl {
-    margin-bottom: var(--space-4xl);
+  .sm\:mb-10 {
+    margin-bottom: var(--space-10);
   }
-  .sm\:my-4xl {
-    margin-top: var(--space-4xl);
-    margin-bottom: var(--space-4xl);
+  .sm\:my-10 {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
   }
 }
 @media (min-width: 1024px) {
@@ -4064,105 +4064,105 @@ Usage
     margin-top: 0;
     margin-bottom: 0;
   }
-  .md\:mt-3xs {
-    margin-top: var(--space-3xs);
+  .md\:mt-1 {
+    margin-top: var(--space-1);
   }
-  .md\:mb-3xs {
-    margin-bottom: var(--space-3xs);
+  .md\:mb-1 {
+    margin-bottom: var(--space-1);
   }
-  .md\:my-3xs {
-    margin-top: var(--space-3xs);
-    margin-bottom: var(--space-3xs);
+  .md\:my-1 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
   }
-  .md\:mt-2xs {
-    margin-top: var(--space-2xs);
+  .md\:mt-2 {
+    margin-top: var(--space-2);
   }
-  .md\:mb-2xs {
-    margin-bottom: var(--space-2xs);
+  .md\:mb-2 {
+    margin-bottom: var(--space-2);
   }
-  .md\:my-2xs {
-    margin-top: var(--space-2xs);
-    margin-bottom: var(--space-2xs);
+  .md\:my-2 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
   }
-  .md\:mt-xs {
-    margin-top: var(--space-xs);
+  .md\:mt-3 {
+    margin-top: var(--space-3);
   }
-  .md\:mb-xs {
-    margin-bottom: var(--space-xs);
+  .md\:mb-3 {
+    margin-bottom: var(--space-3);
   }
-  .md\:my-xs {
-    margin-top: var(--space-xs);
-    margin-bottom: var(--space-xs);
+  .md\:my-3 {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-3);
   }
-  .md\:mt-s {
-    margin-top: var(--space-s);
+  .md\:mt-4 {
+    margin-top: var(--space-4);
   }
-  .md\:mb-s {
-    margin-bottom: var(--space-s);
+  .md\:mb-4 {
+    margin-bottom: var(--space-4);
   }
-  .md\:my-s {
-    margin-top: var(--space-s);
-    margin-bottom: var(--space-s);
+  .md\:my-4 {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-4);
   }
-  .md\:mt-m {
-    margin-top: var(--space-m);
+  .md\:mt-5 {
+    margin-top: var(--space-5);
   }
-  .md\:mb-m {
-    margin-bottom: var(--space-m);
+  .md\:mb-5 {
+    margin-bottom: var(--space-5);
   }
-  .md\:my-m {
-    margin-top: var(--space-m);
-    margin-bottom: var(--space-m);
+  .md\:my-5 {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-5);
   }
-  .md\:mt-l {
-    margin-top: var(--space-l);
+  .md\:mt-6 {
+    margin-top: var(--space-6);
   }
-  .md\:mb-l {
-    margin-bottom: var(--space-l);
+  .md\:mb-6 {
+    margin-bottom: var(--space-6);
   }
-  .md\:my-l {
-    margin-top: var(--space-l);
-    margin-bottom: var(--space-l);
+  .md\:my-6 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
   }
-  .md\:mt-xl {
-    margin-top: var(--space-xl);
+  .md\:mt-7 {
+    margin-top: var(--space-7);
   }
-  .md\:mb-xl {
-    margin-bottom: var(--space-xl);
+  .md\:mb-7 {
+    margin-bottom: var(--space-7);
   }
-  .md\:my-xl {
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-xl);
+  .md\:my-7 {
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-7);
   }
-  .md\:mt-xxl {
-    margin-top: var(--space-xxl);
+  .md\:mt-8 {
+    margin-top: var(--space-8);
   }
-  .md\:mb-xxl {
-    margin-bottom: var(--space-xxl);
+  .md\:mb-8 {
+    margin-bottom: var(--space-8);
   }
-  .md\:my-xxl {
-    margin-top: var(--space-xxl);
-    margin-bottom: var(--space-xxl);
+  .md\:my-8 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-8);
   }
-  .md\:mt-xxxl {
-    margin-top: var(--space-xxxl);
+  .md\:mt-9 {
+    margin-top: var(--space-9);
   }
-  .md\:mb-xxxl {
-    margin-bottom: var(--space-xxxl);
+  .md\:mb-9 {
+    margin-bottom: var(--space-9);
   }
-  .md\:my-xxxl {
-    margin-top: var(--space-xxxl);
-    margin-bottom: var(--space-xxxl);
+  .md\:my-9 {
+    margin-top: var(--space-9);
+    margin-bottom: var(--space-9);
   }
-  .md\:mt-4xl {
-    margin-top: var(--space-4xl);
+  .md\:mt-10 {
+    margin-top: var(--space-10);
   }
-  .md\:mb-4xl {
-    margin-bottom: var(--space-4xl);
+  .md\:mb-10 {
+    margin-bottom: var(--space-10);
   }
-  .md\:my-4xl {
-    margin-top: var(--space-4xl);
-    margin-bottom: var(--space-4xl);
+  .md\:my-10 {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
   }
 }
 @media (min-width: 1280px) {
@@ -4176,105 +4176,105 @@ Usage
     margin-top: 0;
     margin-bottom: 0;
   }
-  .lg\:mt-3xs {
-    margin-top: var(--space-3xs);
+  .lg\:mt-1 {
+    margin-top: var(--space-1);
   }
-  .lg\:mb-3xs {
-    margin-bottom: var(--space-3xs);
+  .lg\:mb-1 {
+    margin-bottom: var(--space-1);
   }
-  .lg\:my-3xs {
-    margin-top: var(--space-3xs);
-    margin-bottom: var(--space-3xs);
+  .lg\:my-1 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
   }
-  .lg\:mt-2xs {
-    margin-top: var(--space-2xs);
+  .lg\:mt-2 {
+    margin-top: var(--space-2);
   }
-  .lg\:mb-2xs {
-    margin-bottom: var(--space-2xs);
+  .lg\:mb-2 {
+    margin-bottom: var(--space-2);
   }
-  .lg\:my-2xs {
-    margin-top: var(--space-2xs);
-    margin-bottom: var(--space-2xs);
+  .lg\:my-2 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
   }
-  .lg\:mt-xs {
-    margin-top: var(--space-xs);
+  .lg\:mt-3 {
+    margin-top: var(--space-3);
   }
-  .lg\:mb-xs {
-    margin-bottom: var(--space-xs);
+  .lg\:mb-3 {
+    margin-bottom: var(--space-3);
   }
-  .lg\:my-xs {
-    margin-top: var(--space-xs);
-    margin-bottom: var(--space-xs);
+  .lg\:my-3 {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-3);
   }
-  .lg\:mt-s {
-    margin-top: var(--space-s);
+  .lg\:mt-4 {
+    margin-top: var(--space-4);
   }
-  .lg\:mb-s {
-    margin-bottom: var(--space-s);
+  .lg\:mb-4 {
+    margin-bottom: var(--space-4);
   }
-  .lg\:my-s {
-    margin-top: var(--space-s);
-    margin-bottom: var(--space-s);
+  .lg\:my-4 {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-4);
   }
-  .lg\:mt-m {
-    margin-top: var(--space-m);
+  .lg\:mt-5 {
+    margin-top: var(--space-5);
   }
-  .lg\:mb-m {
-    margin-bottom: var(--space-m);
+  .lg\:mb-5 {
+    margin-bottom: var(--space-5);
   }
-  .lg\:my-m {
-    margin-top: var(--space-m);
-    margin-bottom: var(--space-m);
+  .lg\:my-5 {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-5);
   }
-  .lg\:mt-l {
-    margin-top: var(--space-l);
+  .lg\:mt-6 {
+    margin-top: var(--space-6);
   }
-  .lg\:mb-l {
-    margin-bottom: var(--space-l);
+  .lg\:mb-6 {
+    margin-bottom: var(--space-6);
   }
-  .lg\:my-l {
-    margin-top: var(--space-l);
-    margin-bottom: var(--space-l);
+  .lg\:my-6 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
   }
-  .lg\:mt-xl {
-    margin-top: var(--space-xl);
+  .lg\:mt-7 {
+    margin-top: var(--space-7);
   }
-  .lg\:mb-xl {
-    margin-bottom: var(--space-xl);
+  .lg\:mb-7 {
+    margin-bottom: var(--space-7);
   }
-  .lg\:my-xl {
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-xl);
+  .lg\:my-7 {
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-7);
   }
-  .lg\:mt-xxl {
-    margin-top: var(--space-xxl);
+  .lg\:mt-8 {
+    margin-top: var(--space-8);
   }
-  .lg\:mb-xxl {
-    margin-bottom: var(--space-xxl);
+  .lg\:mb-8 {
+    margin-bottom: var(--space-8);
   }
-  .lg\:my-xxl {
-    margin-top: var(--space-xxl);
-    margin-bottom: var(--space-xxl);
+  .lg\:my-8 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-8);
   }
-  .lg\:mt-xxxl {
-    margin-top: var(--space-xxxl);
+  .lg\:mt-9 {
+    margin-top: var(--space-9);
   }
-  .lg\:mb-xxxl {
-    margin-bottom: var(--space-xxxl);
+  .lg\:mb-9 {
+    margin-bottom: var(--space-9);
   }
-  .lg\:my-xxxl {
-    margin-top: var(--space-xxxl);
-    margin-bottom: var(--space-xxxl);
+  .lg\:my-9 {
+    margin-top: var(--space-9);
+    margin-bottom: var(--space-9);
   }
-  .lg\:mt-4xl {
-    margin-top: var(--space-4xl);
+  .lg\:mt-10 {
+    margin-top: var(--space-10);
   }
-  .lg\:mb-4xl {
-    margin-bottom: var(--space-4xl);
+  .lg\:mb-10 {
+    margin-bottom: var(--space-10);
   }
-  .lg\:my-4xl {
-    margin-top: var(--space-4xl);
-    margin-bottom: var(--space-4xl);
+  .lg\:my-10 {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
   }
 }
 @media (min-width: 1536px) {
@@ -4288,105 +4288,105 @@ Usage
     margin-top: 0;
     margin-bottom: 0;
   }
-  .xl\:mt-3xs {
-    margin-top: var(--space-3xs);
+  .xl\:mt-1 {
+    margin-top: var(--space-1);
   }
-  .xl\:mb-3xs {
-    margin-bottom: var(--space-3xs);
+  .xl\:mb-1 {
+    margin-bottom: var(--space-1);
   }
-  .xl\:my-3xs {
-    margin-top: var(--space-3xs);
-    margin-bottom: var(--space-3xs);
+  .xl\:my-1 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
   }
-  .xl\:mt-2xs {
-    margin-top: var(--space-2xs);
+  .xl\:mt-2 {
+    margin-top: var(--space-2);
   }
-  .xl\:mb-2xs {
-    margin-bottom: var(--space-2xs);
+  .xl\:mb-2 {
+    margin-bottom: var(--space-2);
   }
-  .xl\:my-2xs {
-    margin-top: var(--space-2xs);
-    margin-bottom: var(--space-2xs);
+  .xl\:my-2 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
   }
-  .xl\:mt-xs {
-    margin-top: var(--space-xs);
+  .xl\:mt-3 {
+    margin-top: var(--space-3);
   }
-  .xl\:mb-xs {
-    margin-bottom: var(--space-xs);
+  .xl\:mb-3 {
+    margin-bottom: var(--space-3);
   }
-  .xl\:my-xs {
-    margin-top: var(--space-xs);
-    margin-bottom: var(--space-xs);
+  .xl\:my-3 {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-3);
   }
-  .xl\:mt-s {
-    margin-top: var(--space-s);
+  .xl\:mt-4 {
+    margin-top: var(--space-4);
   }
-  .xl\:mb-s {
-    margin-bottom: var(--space-s);
+  .xl\:mb-4 {
+    margin-bottom: var(--space-4);
   }
-  .xl\:my-s {
-    margin-top: var(--space-s);
-    margin-bottom: var(--space-s);
+  .xl\:my-4 {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-4);
   }
-  .xl\:mt-m {
-    margin-top: var(--space-m);
+  .xl\:mt-5 {
+    margin-top: var(--space-5);
   }
-  .xl\:mb-m {
-    margin-bottom: var(--space-m);
+  .xl\:mb-5 {
+    margin-bottom: var(--space-5);
   }
-  .xl\:my-m {
-    margin-top: var(--space-m);
-    margin-bottom: var(--space-m);
+  .xl\:my-5 {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-5);
   }
-  .xl\:mt-l {
-    margin-top: var(--space-l);
+  .xl\:mt-6 {
+    margin-top: var(--space-6);
   }
-  .xl\:mb-l {
-    margin-bottom: var(--space-l);
+  .xl\:mb-6 {
+    margin-bottom: var(--space-6);
   }
-  .xl\:my-l {
-    margin-top: var(--space-l);
-    margin-bottom: var(--space-l);
+  .xl\:my-6 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
   }
-  .xl\:mt-xl {
-    margin-top: var(--space-xl);
+  .xl\:mt-7 {
+    margin-top: var(--space-7);
   }
-  .xl\:mb-xl {
-    margin-bottom: var(--space-xl);
+  .xl\:mb-7 {
+    margin-bottom: var(--space-7);
   }
-  .xl\:my-xl {
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-xl);
+  .xl\:my-7 {
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-7);
   }
-  .xl\:mt-xxl {
-    margin-top: var(--space-xxl);
+  .xl\:mt-8 {
+    margin-top: var(--space-8);
   }
-  .xl\:mb-xxl {
-    margin-bottom: var(--space-xxl);
+  .xl\:mb-8 {
+    margin-bottom: var(--space-8);
   }
-  .xl\:my-xxl {
-    margin-top: var(--space-xxl);
-    margin-bottom: var(--space-xxl);
+  .xl\:my-8 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-8);
   }
-  .xl\:mt-xxxl {
-    margin-top: var(--space-xxxl);
+  .xl\:mt-9 {
+    margin-top: var(--space-9);
   }
-  .xl\:mb-xxxl {
-    margin-bottom: var(--space-xxxl);
+  .xl\:mb-9 {
+    margin-bottom: var(--space-9);
   }
-  .xl\:my-xxxl {
-    margin-top: var(--space-xxxl);
-    margin-bottom: var(--space-xxxl);
+  .xl\:my-9 {
+    margin-top: var(--space-9);
+    margin-bottom: var(--space-9);
   }
-  .xl\:mt-4xl {
-    margin-top: var(--space-4xl);
+  .xl\:mt-10 {
+    margin-top: var(--space-10);
   }
-  .xl\:mb-4xl {
-    margin-bottom: var(--space-4xl);
+  .xl\:mb-10 {
+    margin-bottom: var(--space-10);
   }
-  .xl\:my-4xl {
-    margin-top: var(--space-4xl);
-    margin-bottom: var(--space-4xl);
+  .xl\:my-10 {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
   }
 }
 @media (min-width: 1800px) {
@@ -4400,105 +4400,105 @@ Usage
     margin-top: 0;
     margin-bottom: 0;
   }
-  .xxl\:mt-3xs {
-    margin-top: var(--space-3xs);
+  .xxl\:mt-1 {
+    margin-top: var(--space-1);
   }
-  .xxl\:mb-3xs {
-    margin-bottom: var(--space-3xs);
+  .xxl\:mb-1 {
+    margin-bottom: var(--space-1);
   }
-  .xxl\:my-3xs {
-    margin-top: var(--space-3xs);
-    margin-bottom: var(--space-3xs);
+  .xxl\:my-1 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
   }
-  .xxl\:mt-2xs {
-    margin-top: var(--space-2xs);
+  .xxl\:mt-2 {
+    margin-top: var(--space-2);
   }
-  .xxl\:mb-2xs {
-    margin-bottom: var(--space-2xs);
+  .xxl\:mb-2 {
+    margin-bottom: var(--space-2);
   }
-  .xxl\:my-2xs {
-    margin-top: var(--space-2xs);
-    margin-bottom: var(--space-2xs);
+  .xxl\:my-2 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
   }
-  .xxl\:mt-xs {
-    margin-top: var(--space-xs);
+  .xxl\:mt-3 {
+    margin-top: var(--space-3);
   }
-  .xxl\:mb-xs {
-    margin-bottom: var(--space-xs);
+  .xxl\:mb-3 {
+    margin-bottom: var(--space-3);
   }
-  .xxl\:my-xs {
-    margin-top: var(--space-xs);
-    margin-bottom: var(--space-xs);
+  .xxl\:my-3 {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-3);
   }
-  .xxl\:mt-s {
-    margin-top: var(--space-s);
+  .xxl\:mt-4 {
+    margin-top: var(--space-4);
   }
-  .xxl\:mb-s {
-    margin-bottom: var(--space-s);
+  .xxl\:mb-4 {
+    margin-bottom: var(--space-4);
   }
-  .xxl\:my-s {
-    margin-top: var(--space-s);
-    margin-bottom: var(--space-s);
+  .xxl\:my-4 {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-4);
   }
-  .xxl\:mt-m {
-    margin-top: var(--space-m);
+  .xxl\:mt-5 {
+    margin-top: var(--space-5);
   }
-  .xxl\:mb-m {
-    margin-bottom: var(--space-m);
+  .xxl\:mb-5 {
+    margin-bottom: var(--space-5);
   }
-  .xxl\:my-m {
-    margin-top: var(--space-m);
-    margin-bottom: var(--space-m);
+  .xxl\:my-5 {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-5);
   }
-  .xxl\:mt-l {
-    margin-top: var(--space-l);
+  .xxl\:mt-6 {
+    margin-top: var(--space-6);
   }
-  .xxl\:mb-l {
-    margin-bottom: var(--space-l);
+  .xxl\:mb-6 {
+    margin-bottom: var(--space-6);
   }
-  .xxl\:my-l {
-    margin-top: var(--space-l);
-    margin-bottom: var(--space-l);
+  .xxl\:my-6 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
   }
-  .xxl\:mt-xl {
-    margin-top: var(--space-xl);
+  .xxl\:mt-7 {
+    margin-top: var(--space-7);
   }
-  .xxl\:mb-xl {
-    margin-bottom: var(--space-xl);
+  .xxl\:mb-7 {
+    margin-bottom: var(--space-7);
   }
-  .xxl\:my-xl {
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-xl);
+  .xxl\:my-7 {
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-7);
   }
-  .xxl\:mt-xxl {
-    margin-top: var(--space-xxl);
+  .xxl\:mt-8 {
+    margin-top: var(--space-8);
   }
-  .xxl\:mb-xxl {
-    margin-bottom: var(--space-xxl);
+  .xxl\:mb-8 {
+    margin-bottom: var(--space-8);
   }
-  .xxl\:my-xxl {
-    margin-top: var(--space-xxl);
-    margin-bottom: var(--space-xxl);
+  .xxl\:my-8 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-8);
   }
-  .xxl\:mt-xxxl {
-    margin-top: var(--space-xxxl);
+  .xxl\:mt-9 {
+    margin-top: var(--space-9);
   }
-  .xxl\:mb-xxxl {
-    margin-bottom: var(--space-xxxl);
+  .xxl\:mb-9 {
+    margin-bottom: var(--space-9);
   }
-  .xxl\:my-xxxl {
-    margin-top: var(--space-xxxl);
-    margin-bottom: var(--space-xxxl);
+  .xxl\:my-9 {
+    margin-top: var(--space-9);
+    margin-bottom: var(--space-9);
   }
-  .xxl\:mt-4xl {
-    margin-top: var(--space-4xl);
+  .xxl\:mt-10 {
+    margin-top: var(--space-10);
   }
-  .xxl\:mb-4xl {
-    margin-bottom: var(--space-4xl);
+  .xxl\:mb-10 {
+    margin-bottom: var(--space-10);
   }
-  .xxl\:my-4xl {
-    margin-top: var(--space-4xl);
-    margin-bottom: var(--space-4xl);
+  .xxl\:my-10 {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
   }
 }
 @media (min-width: 2400px) {
@@ -4512,105 +4512,105 @@ Usage
     margin-top: 0;
     margin-bottom: 0;
   }
-  .xxxl\:mt-3xs {
-    margin-top: var(--space-3xs);
+  .xxxl\:mt-1 {
+    margin-top: var(--space-1);
   }
-  .xxxl\:mb-3xs {
-    margin-bottom: var(--space-3xs);
+  .xxxl\:mb-1 {
+    margin-bottom: var(--space-1);
   }
-  .xxxl\:my-3xs {
-    margin-top: var(--space-3xs);
-    margin-bottom: var(--space-3xs);
+  .xxxl\:my-1 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
   }
-  .xxxl\:mt-2xs {
-    margin-top: var(--space-2xs);
+  .xxxl\:mt-2 {
+    margin-top: var(--space-2);
   }
-  .xxxl\:mb-2xs {
-    margin-bottom: var(--space-2xs);
+  .xxxl\:mb-2 {
+    margin-bottom: var(--space-2);
   }
-  .xxxl\:my-2xs {
-    margin-top: var(--space-2xs);
-    margin-bottom: var(--space-2xs);
+  .xxxl\:my-2 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
   }
-  .xxxl\:mt-xs {
-    margin-top: var(--space-xs);
+  .xxxl\:mt-3 {
+    margin-top: var(--space-3);
   }
-  .xxxl\:mb-xs {
-    margin-bottom: var(--space-xs);
+  .xxxl\:mb-3 {
+    margin-bottom: var(--space-3);
   }
-  .xxxl\:my-xs {
-    margin-top: var(--space-xs);
-    margin-bottom: var(--space-xs);
+  .xxxl\:my-3 {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-3);
   }
-  .xxxl\:mt-s {
-    margin-top: var(--space-s);
+  .xxxl\:mt-4 {
+    margin-top: var(--space-4);
   }
-  .xxxl\:mb-s {
-    margin-bottom: var(--space-s);
+  .xxxl\:mb-4 {
+    margin-bottom: var(--space-4);
   }
-  .xxxl\:my-s {
-    margin-top: var(--space-s);
-    margin-bottom: var(--space-s);
+  .xxxl\:my-4 {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-4);
   }
-  .xxxl\:mt-m {
-    margin-top: var(--space-m);
+  .xxxl\:mt-5 {
+    margin-top: var(--space-5);
   }
-  .xxxl\:mb-m {
-    margin-bottom: var(--space-m);
+  .xxxl\:mb-5 {
+    margin-bottom: var(--space-5);
   }
-  .xxxl\:my-m {
-    margin-top: var(--space-m);
-    margin-bottom: var(--space-m);
+  .xxxl\:my-5 {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-5);
   }
-  .xxxl\:mt-l {
-    margin-top: var(--space-l);
+  .xxxl\:mt-6 {
+    margin-top: var(--space-6);
   }
-  .xxxl\:mb-l {
-    margin-bottom: var(--space-l);
+  .xxxl\:mb-6 {
+    margin-bottom: var(--space-6);
   }
-  .xxxl\:my-l {
-    margin-top: var(--space-l);
-    margin-bottom: var(--space-l);
+  .xxxl\:my-6 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
   }
-  .xxxl\:mt-xl {
-    margin-top: var(--space-xl);
+  .xxxl\:mt-7 {
+    margin-top: var(--space-7);
   }
-  .xxxl\:mb-xl {
-    margin-bottom: var(--space-xl);
+  .xxxl\:mb-7 {
+    margin-bottom: var(--space-7);
   }
-  .xxxl\:my-xl {
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-xl);
+  .xxxl\:my-7 {
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-7);
   }
-  .xxxl\:mt-xxl {
-    margin-top: var(--space-xxl);
+  .xxxl\:mt-8 {
+    margin-top: var(--space-8);
   }
-  .xxxl\:mb-xxl {
-    margin-bottom: var(--space-xxl);
+  .xxxl\:mb-8 {
+    margin-bottom: var(--space-8);
   }
-  .xxxl\:my-xxl {
-    margin-top: var(--space-xxl);
-    margin-bottom: var(--space-xxl);
+  .xxxl\:my-8 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-8);
   }
-  .xxxl\:mt-xxxl {
-    margin-top: var(--space-xxxl);
+  .xxxl\:mt-9 {
+    margin-top: var(--space-9);
   }
-  .xxxl\:mb-xxxl {
-    margin-bottom: var(--space-xxxl);
+  .xxxl\:mb-9 {
+    margin-bottom: var(--space-9);
   }
-  .xxxl\:my-xxxl {
-    margin-top: var(--space-xxxl);
-    margin-bottom: var(--space-xxxl);
+  .xxxl\:my-9 {
+    margin-top: var(--space-9);
+    margin-bottom: var(--space-9);
   }
-  .xxxl\:mt-4xl {
-    margin-top: var(--space-4xl);
+  .xxxl\:mt-10 {
+    margin-top: var(--space-10);
   }
-  .xxxl\:mb-4xl {
-    margin-bottom: var(--space-4xl);
+  .xxxl\:mb-10 {
+    margin-bottom: var(--space-10);
   }
-  .xxxl\:my-4xl {
-    margin-top: var(--space-4xl);
-    margin-bottom: var(--space-4xl);
+  .xxxl\:my-10 {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
   }
 }
 body.demo {
@@ -4652,7 +4652,7 @@ body.demo .col {
   position: relative;
   background: rgba(96, 96, 96, 0.33);
   outline: 1px dashed rgba(255, 255, 255, 0.5);
-  min-height: var(--space-lg);
+  min-height: var(--space-6);
 }
 body.demo .col::before {
   content: "C";
@@ -4668,7 +4668,7 @@ body.demo .header__col {
   outline: 0;
   background: transparent;
   min-height: 0 !important;
-  margin-top: var(--space-2xs);
+  margin-top: var(--space-2);
 }
 body.demo .header__section::before,
 body.demo .header__grid::before,
@@ -4678,8 +4678,8 @@ body.demo .header__col::before {
 body.demo .header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: var(--space-xl);
-  row-gap: var(--space-3xs);
+  column-gap: var(--space-8);
+  row-gap: var(--space-1);
   font-size: var(--size-0);
 }
 body.demo .header a {
@@ -4694,7 +4694,7 @@ body.demo .header a {
   body.demo .header {
     display: flex;
     justify-content: space-between;
-    column-gap: var(--space-2xs);
+    column-gap: var(--space-2);
   }
 }
 
@@ -4728,7 +4728,7 @@ body.demo .header a {
 
 .demo-grid-toggle {
   position: fixed;
-  inset: auto var(--space-sm) var(--space-sm) auto;
+  inset: auto var(--space-4) var(--space-4) auto;
   cursor: pointer;
 }
 .demo-grid-toggle:hover {
