@@ -34,7 +34,7 @@
       <div class="header__grid | grid">
         <div class="header__col | col">
           <div class="header">
-            <a href="index.html">DLFF™</a>
+            <a href="index.html">DLFF™ (0.1)</a>
             <span>Dirk Lach</span>
             <span>Frontend Framework</span>
             <span>Grid Demo</span>
@@ -53,16 +53,34 @@
 
     <section class="section">
       <div class="grid">
-        <div class="col" data-grid="sm:6 md:6" data-offset="sm:2 md:1"></div>
-        <div class="col" data-grid="md:9-11"></div>
+        <div class="col" data-grid="sm:1-4"></div>
+        <div class="col" data-grid="sm:6-8"></div>
+        <div class="col" data-grid="sm:10-12"></div>
       </div>
     </section>
 
     <section class="section">
       <div class="grid">
-        <div class="col" data-grid="sm:1-4"></div>
-        <div class="col" data-grid="sm:6-8"></div>
-        <div class="col" data-grid="sm:10-12"></div>
+        <div class="col" data-grid="md:2-11" data-subgrid>
+          <div class="col" data-grid="md:3-8"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid --small">
+        <div class="col" data-grid="md:4"></div>
+        <div class="col" data-grid="md:4" data-subgrid>
+          <div class="col" data-grid="md:2-3"></div>
+        </div>
+        <div class="col" data-grid="md:4"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <div class="col" data-grid="sm:6 md:4"></div>
+        <div class="col" data-grid="sm:6 md:7-12"></div>
       </div>
     </section>
 
