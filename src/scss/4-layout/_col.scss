@@ -23,10 +23,15 @@ Usage
 }
 
 // ==================================================================
-// Mixin for data-attribute based grid system
+// Mixin for data-attribute based grid system with hidden columns
 // ==================================================================
 @mixin generate-grid-data($prefix, $min-width) {
   @media (min-width: $min-width) {
+    // Handle hiding columns (e.g. data-grid="md:0 lg:0")
+    [data-grid*="#{$prefix}\:0"] {
+      display: none;
+    }
+
     // Handle column spans (e.g. data-grid="md:6 lg:4")
     @for $i from 1 through 12 {
       [data-grid*="#{$prefix}\:#{$i}"] {

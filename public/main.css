@@ -742,6 +742,9 @@ Usage
 }
 
 @media (min-width: 0px) {
+  [data-grid*="df:0"] {
+    display: none;
+  }
   [data-grid*="df:1"] {
     grid-column: span 1/span 1;
   }
@@ -1089,6 +1092,9 @@ Usage
   }
 }
 @media (min-width: 640px) {
+  [data-grid*="xs:0"] {
+    display: none;
+  }
   [data-grid*="xs:1"] {
     grid-column: span 1/span 1;
   }
@@ -1436,6 +1442,9 @@ Usage
   }
 }
 @media (min-width: 768px) {
+  [data-grid*="sm:0"] {
+    display: none;
+  }
   [data-grid*="sm:1"] {
     grid-column: span 1/span 1;
   }
@@ -1783,6 +1792,9 @@ Usage
   }
 }
 @media (min-width: 1024px) {
+  [data-grid*="md:0"] {
+    display: none;
+  }
   [data-grid*="md:1"] {
     grid-column: span 1/span 1;
   }
@@ -2130,6 +2142,9 @@ Usage
   }
 }
 @media (min-width: 1280px) {
+  [data-grid*="lg:0"] {
+    display: none;
+  }
   [data-grid*="lg:1"] {
     grid-column: span 1/span 1;
   }
@@ -2477,6 +2492,9 @@ Usage
   }
 }
 @media (min-width: 1536px) {
+  [data-grid*="xl:0"] {
+    display: none;
+  }
   [data-grid*="xl:1"] {
     grid-column: span 1/span 1;
   }
@@ -2824,6 +2842,9 @@ Usage
   }
 }
 @media (min-width: 1800px) {
+  [data-grid*="xxl:0"] {
+    display: none;
+  }
   [data-grid*="xxl:1"] {
     grid-column: span 1/span 1;
   }
@@ -3171,6 +3192,9 @@ Usage
   }
 }
 @media (min-width: 2400px) {
+  [data-grid*="xxxl:0"] {
+    display: none;
+  }
   [data-grid*="xxxl:1"] {
     grid-column: span 1/span 1;
   }
