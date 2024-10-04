@@ -1,11 +1,11 @@
-# Dirk Lach Frontend Framework
+# Boilerplate by Dirk Lach (BBDL BETA)
 
-A small CSS framework to help you set up your project in a clean and scalable way. DLFF offers you a flexible layout system (supports features such as grid, subgrid, media queries, container queries, fluid type scale …) and a structure to make your frontend workflow simple.<br>
+A simple boilerplate to help set up projects in a clean and scalable way. BBDL offers you a flexible layout system (supports features such as grid, subgrid, media queries, container queries, fluid type scale …) and a structure to make your frontend workflow simple.<br>
 
 | **Version:** OPEN BETA 1 | **Author:** Dirk Lach | Build in Public |
 | --- | --- | --- |
 
-DLFF is designed to be easy for developers to use (and read) and reflects the principles of how design concepts (visual systems focused on scalability and modularity) are traditionally developed.<br><br>
+BBDL is designed to be easy for developers to use (and read) and reflects the principles of how design concepts (visual systems focused on scalability and modularity) are traditionally developed.<br><br>
 
 **SCSS Folder Structure**:
 - **Variables**: A single config file with all variables helps you to keep everything in view (breakpoints, colors, spacings, fonts, font sizes, line heights, font weights, page padding, border radius, speeds, easings, transitions, container and section configuration)
@@ -18,7 +18,7 @@ DLFF is designed to be easy for developers to use (and read) and reflects the pr
 - **Themes**: Overwrite variables within a theme.
 
 **Demo**:<br>
-https://dlff.vercel.app/ <br>
+https://bbdl.vercel.app/ <br>
 *This is a very simplified demo, for testing and development purposes during the creation of the framework. A proper demo and documentation will be available soon.*<br>
 
 Created by Dirk Lach, Designer and Developer.<br>
