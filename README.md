@@ -53,7 +53,7 @@ BBDL is designed to be easy for developers to use (and read) and reflects the pr
 
 **Grid Demo**:<br>
 https://bbdl.vercel.app/ <br>
-*This is a very simplified demo, for testing and development purposes during the creation of the framework. A proper demo and documentation will be available soon.*<br>
+*This is a very simplified demo, for testing and development purposes during the creation of the boilerplate.*<br>
 
 ## Author
 
