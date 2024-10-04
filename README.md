@@ -17,8 +17,7 @@ BBDL is designed to be easy for developers to use (and read) and reflects the pr
 - **Utilities**: Some tiny helper classes are included (by default, there are margin classes to control the margins for layout parts).
 - **Themes**: Overwrite variables within a theme.
 
-**Grid System**:<br>
-Grid Features
+**Grid Features**:<br>
 - Span Columns
 - Position Columns (Grid Area)
 - Offset Columns
