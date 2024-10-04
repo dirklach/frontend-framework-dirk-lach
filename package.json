@@ -1,17 +1,19 @@
 {
-  "name": "dirk-lach-frontend-framework",
+  "name": "boilerplate-by-dirk-lach",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass src/scss/main.scss public/main.css && pnpm copy:html && pnpm copy:js",
+    "build": "sass src/scss/main.scss public/main.css && pnpm copy:html && pnpm copy:js && pnpm copy:assets",
     "watch:sass": "sass --watch src/scss/main.scss public/main.css",
     "serve": "browser-sync start --server public --files 'public/**/*.css, public/**/*.html, public/**/*.js'",
     "copy:html": "cp src/demo/*.html public/",
     "copy:js": "cp src/demo/*.js public/",
+    "copy:assets": "cp src/fav.png public/",
     "watch:html": "onchange 'src/**/*.html' -- pnpm copy:html",
     "watch:js": "onchange 'src/**/*.js' -- pnpm copy:js",
-    "dev": "concurrently \"pnpm watch:sass\" \"pnpm watch:html\" \"pnpm watch:js\" \"pnpm copy:html && pnpm copy:js && pnpm serve\""
+    "watch:assets": "onchange 'src/fav.png' -- pnpm copy:assets",
+    "dev": "concurrently \"pnpm watch:sass\" \"pnpm watch:html\" \"pnpm watch:js\" \"pnpm watch:assets\" \"pnpm copy:html && pnpm copy:js && pnpm copy:assets && pnpm serve\""
   },
   "devDependencies": {
     "sass": "^1.55.0",
