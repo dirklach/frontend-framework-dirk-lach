@@ -7,7 +7,7 @@ A simple boilerplate to help set up projects in a clean and scalable way. BBDL o
 
 BBDL is designed to be easy for developers to use (and read) and reflects the principles of how design concepts (visual systems focused on scalability and modularity) are traditionally developed.<br><br>
 
-**SCSS Folder Structure**:
+**SCSS Folder Structure**:<br>
 - **Variables**: A single config file with all variables helps you to keep everything in view (breakpoints, colors, spacings, fonts, font sizes, line heights, font weights, page padding, border radius, speeds, easings, transitions, container and section configuration)
 - **Tools**: By default, a breakpoint tool (mixin) is included to make working with media queries easier for you.
 - **Generic**: A reset file and global styles for HTML elements without classes.
@@ -16,6 +16,34 @@ BBDL is designed to be easy for developers to use (and read) and reflects the pr
 - **Components**: Add your individual components.
 - **Utilities**: Some tiny helper classes are included (by default, there are margin classes to control the margins for layout parts).
 - **Themes**: Overwrite variables within a theme.
+
+**Grid System**:<br>
+Grid Features
+- Span Columns
+- Position Columns (Grid Area)
+- Offset Columns
+- Responsive Layout Adjustments
+- Hide Columns
+
+Subgrid Support
+- Inherit the parent grid within child elements
+
+Container Features
+- Various Container Sizes
+- Align Container
+- Full-Width Container
+
+Margin Utility Classes
+- Define spacing using utility classes to create layout compositions without the need for individual classes
+
+Debug Tool
+- Inspect the sizes of your elements
+
+Grid Preview
+- Show and hide the underlying grid, similar to a design tool
+
+Individual Component Classes
+- Create custom classes to write individual styles without relying on utility classes
 
 **Demo**:<br>
 https://bbdl.vercel.app/ <br>
