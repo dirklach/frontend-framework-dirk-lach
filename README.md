@@ -1,11 +1,11 @@
-# Boilerplate by Dirk Lach (BBDL BETA)
+# Frontend Framework by Dirk Lach (FFDL BETA)
 
-A simple boilerplate to help set up projects in a clean and scalable way. BBDL offers you a flexible layout system (supports features such as grid, subgrid, media queries, container queries, fluid type scale …) and a structure to make your frontend workflow simple.<br>
+A simple and lightweight framework to help set up projects in a clean and scalable way. FFDL offers you a flexible layout system (supports features such as grid, subgrid, media queries, container queries, fluid type scale …) and a structure to make your frontend workflow simple.<br>
 
 | **Version:** OPEN BETA 1 | **Author:** Dirk Lach | Build in Public |
 | --- | --- | --- |
 
-BBDL is designed to be easy for developers to use (and read) and reflects the principles of how design concepts (visual systems focused on scalability and modularity) are traditionally developed.<br><br>
+FFDL is designed to be user-friendly for developers, with a clear and readable structure, reflecting principles of traditional design concepts such as scalability-focused visual systems and modularity.<br><br>
 
 ## File Architecture
 
@@ -52,8 +52,8 @@ BBDL is designed to be easy for developers to use (and read) and reflects the pr
 ## Preview
 
 **Grid Demo**:<br>
-https://bbdl.vercel.app/ <br>
-*This is a very simplified demo, for testing and development purposes during the creation of the boilerplate.*<br>
+https://ffdl.vercel.app/ <br>
+*This is a very simplified demo, for testing and development purposes during the creation of the framework.*<br>
 
 ## Author
 
