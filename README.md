@@ -7,6 +7,8 @@ A simple boilerplate to help set up projects in a clean and scalable way. BBDL o
 
 BBDL is designed to be easy for developers to use (and read) and reflects the principles of how design concepts (visual systems focused on scalability and modularity) are traditionally developed.<br><br>
 
+## File Architecture
+
 **SCSS Folder Structure**:<br>
 - **Variables**: A single config file with all variables helps you to keep everything in view (breakpoints, colors, spacings, fonts, font sizes, line heights, font weights, page padding, border radius, speeds, easings, transitions, container and section configuration)
 - **Tools**: By default, a breakpoint tool (mixin) is included to make working with media queries easier for you.
@@ -20,31 +22,31 @@ BBDL is designed to be easy for developers to use (and read) and reflects the pr
 
 ## Grid System
 
-Grid Features:
+**Grid Features**
 - Span Columns
 - Position Columns (Grid Area)
 - Offset Columns
 - Responsive Layout Adjustments
 - Hide Columns
 
-Subgrid Support
+**Subgrid Support**
 - Inherit the parent grid within child elements
 
-Container Features
+**Container Features**
 - Various Container Sizes
 - Align Container
 - Full-Width Container
 
-Margin Utility Classes
+**Margin Utility Classes**
 - Define spacing using utility classes to create layout compositions without the need for individual classes
 
-Debug Tool
+**Debug Tool**
 - Inspect the sizes of your elements
 
-Grid Preview
+**Grid Preview**
 - Show and hide the underlying grid, similar to a design tool
 
-Individual Component Classes
+**Individual Component Classes**
 - Create custom classes to write individual styles without relying on utility classes
 
 **Demo**:<br>
