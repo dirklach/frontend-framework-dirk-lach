@@ -3691,7 +3691,7 @@ Usage
 
 .text-heading {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-regular);
 }
 
 .text-heading-alternative {
@@ -4757,6 +4757,18 @@ body.demo .header a {
 }
 .demo-grid-toggle:hover {
   text-decoration: underline;
+}
+
+.c-header__section,
+.c-header__grid,
+.c-header__grid .col {
+  background: transparent !important;
+  outline: 0 !important;
+}
+.c-header__section::before,
+.c-header__grid::before,
+.c-header__grid .col::before {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

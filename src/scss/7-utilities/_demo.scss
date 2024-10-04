@@ -133,3 +133,13 @@ body.demo {
     text-decoration: underline;
   }
 }
+
+.c-header__section,
+.c-header__grid,
+.c-header__grid .col {
+  background: transparent!important;
+  outline: 0!important;
+  &::before {
+    display: none;
+  }
+}
